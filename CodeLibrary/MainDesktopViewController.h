@@ -14,7 +14,11 @@
 @property(nonatomic, weak) ICSDrawerController *drawer;
 
 @property (weak,nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UINavigationItem *titleLabel;
 
 @property (nonatomic, copy) NSString *typeId;
+
+/*更改title文字*/
+- (void)changeTitleText:(NSString *)text;
 
 @end

@@ -13,7 +13,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长测试长度长" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YU-Qd-WxQ">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+                        <rect key="frame" x="3" y="0.0" width="94" height="140"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -22,10 +22,10 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <constraints>
-                <constraint firstItem="4YU-Qd-WxQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="03m-Ge-XTi"/>
+                <constraint firstItem="4YU-Qd-WxQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="03m-Ge-XTi"/>
                 <constraint firstAttribute="bottom" secondItem="4YU-Qd-WxQ" secondAttribute="bottom" id="5Rz-Pn-Qbw"/>
                 <constraint firstItem="4YU-Qd-WxQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="JLW-BE-1n4"/>
-                <constraint firstAttribute="trailing" secondItem="4YU-Qd-WxQ" secondAttribute="trailing" id="bOV-1J-VNA"/>
+                <constraint firstAttribute="trailing" secondItem="4YU-Qd-WxQ" secondAttribute="trailing" constant="3" id="bOV-1J-VNA"/>
             </constraints>
             <size key="customSize" width="100" height="140"/>
             <connections>

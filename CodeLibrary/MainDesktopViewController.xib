@@ -4,9 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainDesktopViewController">
             <connections>
                 <outlet property="collectionView" destination="GjD-cW-vEi" id="Pqp-Cs-EXl"/>
+                <outlet property="titleLabel" destination="Lzh-4p-Nng" id="c8W-s1-urD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,7 +24,7 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="组件库" id="Lzh-4p-Nng">
+                        <navigationItem title="🏠  系统组件" id="Lzh-4p-Nng">
                             <barButtonItem key="leftBarButtonItem" image="hamburger" id="eGA-Y8-T2X">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>

@@ -174,19 +174,19 @@
 		7BFFA12819F7A5A100E0FE53 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				7BFFA12919F7A5BC00E0FE53 /* 1.1tableview */,
+				7BFFA13319F7B03A00E0FE53 /* systemcomp */,
 			);
 			name = views;
 			sourceTree = "<group>";
 		};
-		7BFFA12919F7A5BC00E0FE53 /* 1.1tableview */ = {
+		7BFFA12919F7A5BC00E0FE53 /* tableview */ = {
 			isa = PBXGroup;
 			children = (
 				7BFFA12A19F7A62700E0FE53 /* TableViewExampleTableViewController.h */,
 				7BFFA12B19F7A62700E0FE53 /* TableViewExampleTableViewController.m */,
 				7BFFA12C19F7A62700E0FE53 /* TableViewExampleTableViewController.xib */,
 			);
-			name = 1.1tableview;
+			name = tableview;
 			sourceTree = "<group>";
 		};
 		7BFFA13219F7AB4B00E0FE53 /* desktop */ = {
@@ -202,6 +202,14 @@
 				7B6811F319ED0D550081FA88 /* ColorfulButtonCell.xib */,
 			);
 			name = desktop;
+			sourceTree = "<group>";
+		};
+		7BFFA13319F7B03A00E0FE53 /* systemcomp */ = {
+			isa = PBXGroup;
+			children = (
+				7BFFA12919F7A5BC00E0FE53 /* tableview */,
+			);
+			name = systemcomp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +261,7 @@
 				TargetAttributes = {
 					7B15626A19E7ABE40019A897 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = VS77V8Q4MN;
 					};
 					7B15628319E7ABE40019A897 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -429,9 +438,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = CodeLibrary/PrefixHeader.pch;
 				INFOPLIST_FILE = CodeLibrary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -441,9 +451,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = CodeLibrary/PrefixHeader.pch;
 				INFOPLIST_FILE = CodeLibrary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

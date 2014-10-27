@@ -33,6 +33,8 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.typeId = @"1";
+    
     colorLibrary = @[[UIColor colorWithRed:19.0f/255.0f green:168.0f/255.0f blue:157.0f/255.0f alpha:1.0f],
                      [UIColor colorWithRed:232.0f/255.0f green:82.0f/255.0f blue:112.0f/255.0f alpha:1.0f],
                      [UIColor colorWithRed:66.0f/255.0f green:130.0f/255.0f blue:166.0f/255.0f alpha:1.0f],
@@ -82,6 +84,11 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
     [self.collectionView setBackgroundView:tableBgView];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBarHidden = YES;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -96,6 +103,11 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)changeTitleText:(NSString *)text
+{
+    self.titleLabel.title = text;
+}
 
 #pragma mark - Configuring the view’s layout behavior
 
@@ -162,7 +174,7 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 //    if ((indexPath.row + 1) % 3 == 0) {
 //        return CGSizeMake(SCREEN_WIDTH - SCREEN_WIDTH / 3 * 2, SCREEN_WIDTH/3);
 //    } else {
-        return CGSizeMake(SCREEN_WIDTH/3, SCREEN_WIDTH/2.8);
+        return CGSizeMake(SCREEN_WIDTH/3.0, SCREEN_WIDTH/2.8);
 //    }
 }
 

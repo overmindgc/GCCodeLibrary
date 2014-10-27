@@ -7,8 +7,11 @@
 //
 
 #import "LeftNavViewController.h"
+#import "MainDesktopViewController.h"
 
+static const CGFloat TopViewHight = 30.0f;
 static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewControllerCellReuseId";
+
 
 @interface LeftNavViewController ()
 
@@ -22,15 +25,16 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
 @implementation LeftNavViewController
 {
     UIColor *bgColor;
+    UIColor *selectColor;
 }
 
 - (id)init
 {
     self = [super init];
     if (self != nil) {
-        bgColor = [UIColor colorWithRed:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1.0f];
-        
-        NSDictionary *typeDic1 = [NSDictionary dictionaryWithObjectsAndKeys:@"0",@"typeId",@" ",@"typeName", nil];
+        bgColor = [UIColor colorWithRed:60.0f/255.0f green:60.0f/255.0f blue:60.0f/255.0f alpha:1.0f];
+        selectColor = [UIColor colorWithRed:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1.0f];
+//        NSDictionary *typeDic1 = [NSDictionary dictionaryWithObjectsAndKeys:@"0",@"typeId",@" ",@"typeName", nil];
         NSDictionary *typeDic2 = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"typeId",@"🏠  系统组件",@"typeName", nil];
         NSDictionary *typeDic3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2",@"typeId",@"⭐️  自定义组件",@"typeName", nil];
         NSDictionary *typeDic4 = [NSDictionary dictionaryWithObjectsAndKeys:@"3",@"typeId",@"👀  视图切换",@"typeName", nil];
@@ -41,7 +45,9 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
         NSDictionary *typeDic9 = [NSDictionary dictionaryWithObjectsAndKeys:@"8",@"typeId",@"👐  触摸手势",@"typeName", nil];
         NSDictionary *typeDic10 = [NSDictionary dictionaryWithObjectsAndKeys:@"9",@"typeId",@"🐰  感应器开发",@"typeName", nil];
         
-        _types = @[typeDic1,typeDic2,typeDic3,typeDic4,typeDic5,typeDic6,typeDic7,typeDic8,typeDic9,typeDic10];
+        _types = @[typeDic2,typeDic3,typeDic4,typeDic5,typeDic6,typeDic7,typeDic8,typeDic9,typeDic10];
+        
+        
     }
     return self;
 }
@@ -54,11 +60,26 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
     
     self.view.backgroundColor = bgColor;
     
+    UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TopViewHight)];
+    topView.backgroundColor = selectColor;
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(17, 0, 200, TopViewHight)];
+    titleLabel.text = @"分类导航";
+    titleLabel.textColor = [UIColor whiteColor];
+    [topView addSubview:titleLabel];
+    [self.view addSubview:topView];
+    
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, TopViewHight, SCREEN_WIDTH, SCREEN_HEIGHT - TopViewHight)];
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.tableView.backgroundColor = bgColor;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorInset = UIEdgeInsetsZero;
     self.tableView.separatorColor = [UIColor colorWithRed:40.0f/255.0f green:40.0f/255.0f blue:40.0f/255.0f alpha:1.0f];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ColorsViewControllerCellReuseId];
+    
+    [self.view addSubview:self.tableView];
+    
 }
 
 #pragma mark - Configuring the view’s layout behavior
@@ -95,7 +116,7 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ColorsViewControllerCellReuseId
                                                             forIndexPath:indexPath];
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:60.0f/255.0f green:60.0f/255.0f blue:60.0f/255.0f alpha:1.0f];
+    cell.selectedBackgroundView.backgroundColor = selectColor;
     NSDictionary *rowDict = [self.types objectAtIndex:indexPath.row];
     cell.textLabel.text = [rowDict valueForKey:@"typeName"];
     cell.textLabel.textColor = [UIColor whiteColor];
@@ -138,11 +159,13 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
     }
     else {
         // Reload the current center view controller and update its background color
-//        typeof(self) __weak weakSelf = self;
-//        [self.drawer reloadCenterViewControllerUsingBlock:^(){
-//            NSParameterAssert(weakSelf.colors);
+        typeof(self) __weak weakSelf = self;
+        NSDictionary *rowDict = [self.types objectAtIndex:indexPath.row];
+        [self.drawer reloadCenterViewControllerUsingBlock:^(){
 //            weakSelf.drawer.centerViewController.view.backgroundColor = weakSelf.colors[indexPath.row];
-//        }];
+            MainDesktopViewController *mainDesktopVC = weakSelf.drawer.centerViewController;
+            [mainDesktopVC changeTitleText:[rowDict objectForKey:@"typeName"]];
+        }];
         
 //        // Replace the current center view controller with a new one
 //        ICSPlainColorViewController *center = [[ICSPlainColorViewController alloc] init];
