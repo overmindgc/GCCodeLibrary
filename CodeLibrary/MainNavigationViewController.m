@@ -20,9 +20,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationBarHidden = YES;
-    LeftNavViewController *leftVC = [[LeftNavViewController alloc] init];
     
+    //加载数据源数据
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"collectionSource.plist"];
+    NSArray *collectionSource = [[NSArray alloc] initWithContentsOfFile:path];
+    
+    LeftNavViewController *leftVC = [[LeftNavViewController alloc] init];
+    leftVC.types = collectionSource;
     MainDesktopViewController *desktop = [[MainDesktopViewController alloc] initWithNibName:@"MainDesktopViewController" bundle:nil];
+    NSDictionary *rowDict = [collectionSource objectAtIndex:0];
+    [desktop changeTitleText:[rowDict objectForKey:@"typeName"]];
+    [desktop loadListViewBy:[rowDict objectForKey:@"child"]];
     
     ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:leftVC
                                                                      centerViewController:desktop];

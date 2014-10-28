@@ -16,9 +16,14 @@
 @property (weak,nonatomic) IBOutlet UICollectionView *collectionView;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleLabel;
 
+@property (nonatomic, strong) NSArray *currSourceArray;
+
 @property (nonatomic, copy) NSString *typeId;
 
 /*更改title文字*/
 - (void)changeTitleText:(NSString *)text;
+
+/*根据类型id更新列表*/
+- (void)loadListViewBy:(NSArray *)sourceArray;
 
 @end

@@ -15,7 +15,6 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
 
 @interface LeftNavViewController ()
 
-@property (nonatomic, strong) NSArray *types;
 @property (nonatomic, assign) NSInteger previousRow;
 
 @end
@@ -34,20 +33,10 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
     if (self != nil) {
         bgColor = [UIColor colorWithRed:60.0f/255.0f green:60.0f/255.0f blue:60.0f/255.0f alpha:1.0f];
         selectColor = [UIColor colorWithRed:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1.0f];
-//        NSDictionary *typeDic1 = [NSDictionary dictionaryWithObjectsAndKeys:@"0",@"typeId",@" ",@"typeName", nil];
-        NSDictionary *typeDic2 = [NSDictionary dictionaryWithObjectsAndKeys:@"1",@"typeId",@"🏠  系统组件",@"typeName", nil];
-        NSDictionary *typeDic3 = [NSDictionary dictionaryWithObjectsAndKeys:@"2",@"typeId",@"⭐️  自定义组件",@"typeName", nil];
-        NSDictionary *typeDic4 = [NSDictionary dictionaryWithObjectsAndKeys:@"3",@"typeId",@"👀  视图切换",@"typeName", nil];
-        NSDictionary *typeDic5 = [NSDictionary dictionaryWithObjectsAndKeys:@"4",@"typeId",@"🍵  图像处理",@"typeName", nil];
-        NSDictionary *typeDic6 = [NSDictionary dictionaryWithObjectsAndKeys:@"5",@"typeId",@"🏡  绘图&动画",@"typeName", nil];
-        NSDictionary *typeDic7 = [NSDictionary dictionaryWithObjectsAndKeys:@"6",@"typeId",@"⬇️  网络开发",@"typeName", nil];
-        NSDictionary *typeDic8 = [NSDictionary dictionaryWithObjectsAndKeys:@"7",@"typeId",@"👂  自动布局",@"typeName", nil];
-        NSDictionary *typeDic9 = [NSDictionary dictionaryWithObjectsAndKeys:@"8",@"typeId",@"👐  触摸手势",@"typeName", nil];
-        NSDictionary *typeDic10 = [NSDictionary dictionaryWithObjectsAndKeys:@"9",@"typeId",@"🐰  感应器开发",@"typeName", nil];
         
-        _types = @[typeDic2,typeDic3,typeDic4,typeDic5,typeDic6,typeDic7,typeDic8,typeDic9,typeDic10];
-        
-        
+        //加载数据源数据
+        NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"collectionSource.plist"];
+        self.types = [[NSArray alloc] initWithContentsOfFile:path];
     }
     return self;
 }
@@ -79,7 +68,6 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ColorsViewControllerCellReuseId];
     
     [self.view addSubview:self.tableView];
-    
 }
 
 #pragma mark - Configuring the view’s layout behavior
@@ -165,6 +153,7 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
 //            weakSelf.drawer.centerViewController.view.backgroundColor = weakSelf.colors[indexPath.row];
             MainDesktopViewController *mainDesktopVC = weakSelf.drawer.centerViewController;
             [mainDesktopVC changeTitleText:[rowDict objectForKey:@"typeName"]];
+            [mainDesktopVC loadListViewBy:[rowDict objectForKey:@"child"]];
         }];
         
 //        // Replace the current center view controller with a new one

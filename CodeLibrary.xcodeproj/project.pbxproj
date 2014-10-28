@@ -14,6 +14,8 @@
 		7B15628B19E7ABE40019A897 /* CodeLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */; };
 		7B4FCE2B19EB806000AAE30A /* MainDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FCE2919EB806000AAE30A /* MainDesktopViewController.m */; };
 		7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FCE2A19EB806000AAE30A /* MainDesktopViewController.xib */; };
+		7B64819819FF762A006A1D1F /* collectionSource.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B64819719FF762A006A1D1F /* collectionSource.plist */; };
+		7B64819B19FF9E22006A1D1F /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B64819A19FF9E22006A1D1F /* test.storyboard */; };
 		7B6811F419ED0D550081FA88 /* ColorfulButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6811F219ED0D550081FA88 /* ColorfulButtonCell.m */; };
 		7B6811F519ED0D550081FA88 /* ColorfulButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6811F319ED0D550081FA88 /* ColorfulButtonCell.xib */; };
 		7B9B03A319EE5FE20039470F /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A019EE5FE20039470F /* ICSDrawerController.m */; };
@@ -49,6 +51,8 @@
 		7B4FCE2819EB806000AAE30A /* MainDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDesktopViewController.h; sourceTree = "<group>"; };
 		7B4FCE2919EB806000AAE30A /* MainDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDesktopViewController.m; sourceTree = "<group>"; };
 		7B4FCE2A19EB806000AAE30A /* MainDesktopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDesktopViewController.xib; sourceTree = "<group>"; };
+		7B64819719FF762A006A1D1F /* collectionSource.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = collectionSource.plist; sourceTree = "<group>"; };
+		7B64819A19FF9E22006A1D1F /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		7B6811F119ED0D550081FA88 /* ColorfulButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulButtonCell.h; sourceTree = "<group>"; };
 		7B6811F219ED0D550081FA88 /* ColorfulButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulButtonCell.m; sourceTree = "<group>"; };
 		7B6811F319ED0D550081FA88 /* ColorfulButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorfulButtonCell.xib; sourceTree = "<group>"; };
@@ -118,6 +122,7 @@
 				7BFFA13019F7A91D00E0FE53 /* MainNavigationViewController.m */,
 				7B15627219E7ABE40019A897 /* AppDelegate.h */,
 				7B15627319E7ABE40019A897 /* AppDelegate.m */,
+				7B64819719FF762A006A1D1F /* collectionSource.plist */,
 				7B15627B19E7ABE40019A897 /* Images.xcassets */,
 				7B15627D19E7ABE40019A897 /* LaunchScreen.xib */,
 				7B15626E19E7ABE40019A897 /* Supporting Files */,
@@ -150,6 +155,14 @@
 				7B15628919E7ABE40019A897 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B64819919FF9DF5006A1D1F /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				7B64819A19FF9E22006A1D1F /* test.storyboard */,
+			);
+			name = storyboard;
 			sourceTree = "<group>";
 		};
 		7B9B039E19EE5FE20039470F /* ICSDrawerController */ = {
@@ -207,6 +220,7 @@
 		7BFFA13319F7B03A00E0FE53 /* systemcomp */ = {
 			isa = PBXGroup;
 			children = (
+				7B64819919FF9DF5006A1D1F /* storyboard */,
 				7BFFA12919F7A5BC00E0FE53 /* tableview */,
 			);
 			name = systemcomp;
@@ -296,8 +310,10 @@
 				7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */,
 				7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */,
 				7B6811F519ED0D550081FA88 /* ColorfulButtonCell.xib in Resources */,
+				7B64819819FF762A006A1D1F /* collectionSource.plist in Resources */,
 				7B15627F19E7ABE40019A897 /* LaunchScreen.xib in Resources */,
 				7B15627C19E7ABE40019A897 /* Images.xcassets in Resources */,
+				7B64819B19FF9E22006A1D1F /* test.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

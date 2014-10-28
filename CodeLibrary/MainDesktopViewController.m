@@ -16,17 +16,11 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 /*桌面块颜色*/
 @property (nonatomic, strong) NSArray *colorLibrary;
 
-@property (nonatomic, strong) NSArray *sourceLibrary;
-
-@property (nonatomic, strong) NSArray *currSourceArray;
-
 @end
 
 @implementation MainDesktopViewController
 
 @synthesize colorLibrary;
-
-@synthesize sourceLibrary;
 
 @synthesize currSourceArray;
 
@@ -53,19 +47,6 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
                      [UIColor colorWithRed:140.0f/255.0f green:86.0f/255.0f blue:143.0f/255.0f alpha:1.0f],
                      [UIColor colorWithRed:235.0f/255.0f green:196.0f/255.0f blue:79.0f/255.0f alpha:1.0f],
                      [UIColor colorWithRed:3.0f/255.0f green:201.0f/255.0f blue:169.0f/255.0f alpha:1.0f]];
-    
-    sourceLibrary = @[[NSDictionary dictionaryWithObjects:@[@"1",@"1",@"UITableView示例",@"TableViewExampleTableViewController"] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"1",@"2",@"UICollectionView示例",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"2",@"1",@"MyView",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"3",@"1",@"Navigation示例",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"4",@"1",@"图片模糊",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"5",@"1",@"画板",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"6",@"1",@"下载进度",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"7",@"1",@"autoLayeOut",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"8",@"1",@"tip手势示例",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]],
-                      [NSDictionary dictionaryWithObjects:@[@"9",@"1",@"陀螺仪",@""] forKeys:@[@"typeId",@"orderId",@"labelText",@"className"]]];
-    
-    currSourceArray = sourceLibrary;
     
     [self.collectionView registerClass:[ColorfulButtonCell class] forCellWithReuseIdentifier:colorfulCellReuseId];
     
@@ -107,6 +88,12 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 - (void)changeTitleText:(NSString *)text
 {
     self.titleLabel.title = text;
+}
+
+- (void)loadListViewBy:(NSArray *)sourceArray
+{
+    currSourceArray = sourceArray;
+    [self.collectionView reloadData];
 }
 
 #pragma mark - Configuring the view’s layout behavior
@@ -205,7 +192,6 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 //    cell.backgroundColor = [UIColor whiteColor];
     
     Class currClass = NSClassFromString(cell.className);
-    
     id currView = [[currClass alloc] init];
     
     if (currView) {
