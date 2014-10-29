@@ -22,6 +22,7 @@
 		7B9B03A419EE5FE20039470F /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A219EE5FE20039470F /* ICSDropShadowView.m */; };
 		7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A719EE61A30039470F /* LeftNavViewController.m */; };
 		7BC5558619F4F56F004B0420 /* AppConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5558519F4F56F004B0420 /* AppConsts.m */; };
+		7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */; };
 		7BFFA12D19F7A62700E0FE53 /* TableViewExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFFA12B19F7A62700E0FE53 /* TableViewExampleTableViewController.m */; };
 		7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFA12C19F7A62700E0FE53 /* TableViewExampleTableViewController.xib */; };
 		7BFFA13119F7A91D00E0FE53 /* MainNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFFA13019F7A91D00E0FE53 /* MainNavigationViewController.m */; };
@@ -66,6 +67,8 @@
 		7B9B03A719EE61A30039470F /* LeftNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftNavViewController.m; sourceTree = "<group>"; };
 		7BC5558419F4F56F004B0420 /* AppConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConsts.h; sourceTree = "<group>"; };
 		7BC5558519F4F56F004B0420 /* AppConsts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConsts.m; sourceTree = "<group>"; };
+		7BE9CD471A00C99D006FE8A5 /* StoryBoardTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBoardTestViewController.h; sourceTree = "<group>"; };
+		7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBoardTestViewController.m; sourceTree = "<group>"; };
 		7BFFA12A19F7A62700E0FE53 /* TableViewExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewExampleTableViewController.h; sourceTree = "<group>"; };
 		7BFFA12B19F7A62700E0FE53 /* TableViewExampleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewExampleTableViewController.m; sourceTree = "<group>"; };
 		7BFFA12C19F7A62700E0FE53 /* TableViewExampleTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewExampleTableViewController.xib; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				7B64819A19FF9E22006A1D1F /* test.storyboard */,
+				7BE9CD471A00C99D006FE8A5 /* StoryBoardTestViewController.h */,
+				7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */,
 			);
 			name = storyboard;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				7BFFA12D19F7A62700E0FE53 /* TableViewExampleTableViewController.m in Sources */,
 				7BFFA13119F7A91D00E0FE53 /* MainNavigationViewController.m in Sources */,
 				7B6811F419ED0D550081FA88 /* ColorfulButtonCell.m in Sources */,
+				7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */,
 				7B15627419E7ABE40019A897 /* AppDelegate.m in Sources */,
 				7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */,
 				7B9B03A419EE5FE20039470F /* ICSDropShadowView.m in Sources */,

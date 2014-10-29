@@ -149,7 +149,6 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
     UIColor *cellColor = [colorLibrary objectAtIndex:(indexPath.row + colorLibrary.count) % colorLibrary.count];
     cell.backgroundColor = cellColor;
     cell.titleLabel.text = [currDict objectForKey:@"labelText"];
-    cell.className = [currDict objectForKey:@"className"];
     
     return cell;
 }
@@ -188,15 +187,38 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    ColorfulButtonCell * cell = (ColorfulButtonCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//    ColorfulButtonCell * cell = (ColorfulButtonCell *)[collectionView cellForItemAtIndexPath:indexPath];
 //    cell.backgroundColor = [UIColor whiteColor];
-    
-    Class currClass = NSClassFromString(cell.className);
-    id currView = [[currClass alloc] init];
-    
-    if (currView) {
-        [self.navigationController pushViewController:currView animated:YES];
+    NSDictionary *currDict = [currSourceArray objectAtIndex:indexPath.row];
+    NSNumber *type = [currDict objectForKey:@"loadType"];
+    NSString *className = [currDict objectForKey:@"className"];
+    switch ([type integerValue]) {
+        case 1: {
+            Class currClass = NSClassFromString(className);
+            UIViewController *currVC = [[currClass alloc] init];
+
+            if (currVC) {
+//                [self.navigationController pushViewController:currVC animated:YES];
+                currVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+                [self presentViewController:currVC animated:YES completion:nil];
+            }
+            break;
+        }
+        case 2: {
+            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:className bundle:[NSBundle mainBundle]];
+            if (storyBoard) {
+                UIViewController *initVC = [storyBoard instantiateInitialViewController];
+//                initVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+                [self presentViewController:initVC animated:YES completion:nil];
+//                [self.navigationController pushViewController:initVC animated:YES];
+            }
+            break;
+        }
+        default:
+            break;
     }
+    
+    
     
 }
 

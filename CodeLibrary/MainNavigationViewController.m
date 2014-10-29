@@ -34,7 +34,7 @@
     
     ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:leftVC
                                                                      centerViewController:desktop];
-    self.viewControllers = @[drawer];
+    [self addChildViewController:drawer];
 }
 
 - (void)didReceiveMemoryWarning {

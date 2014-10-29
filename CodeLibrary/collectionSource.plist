@@ -21,7 +21,7 @@
 				<key>labelText</key>
 				<string>store</string>
 				<key>className</key>
-				<string>test.storyboard</string>
+				<string>test</string>
 				<key>loadType</key>
 				<integer>2</integer>
 			</dict>

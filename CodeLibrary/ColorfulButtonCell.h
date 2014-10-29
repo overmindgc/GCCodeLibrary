@@ -10,8 +10,6 @@
 
 @interface ColorfulButtonCell : UICollectionViewCell
 
-@property (nonatomic, copy) NSString *className;
-
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
