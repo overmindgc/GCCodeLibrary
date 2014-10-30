@@ -35,11 +35,11 @@
 			</dict>
 			<dict>
 				<key>labelText</key>
-				<string>UITableView示例</string>
+				<string>Swift测试</string>
 				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
+				<string>SwiftViewController</string>
 				<key>loadType</key>
-				<integer>1</integer>
+				<integer>3</integer>
 			</dict>
 			<dict>
 				<key>labelText</key>

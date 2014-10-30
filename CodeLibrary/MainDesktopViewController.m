@@ -8,6 +8,7 @@
 
 #import "MainDesktopViewController.h"
 #import "ColorfulButtonCell.h"
+#import "Codelibrary-swift.h"
 
 static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 
@@ -214,12 +215,23 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
             }
             break;
         }
+        case 3: {
+            Class currClass = [self swiftClassFromString:className];
+            UIViewController *currVC = [[currClass alloc] init];
+            [self presentViewController:currVC animated:YES completion:nil];
+            break;
+        }
         default:
             break;
     }
     
-    
-    
+}
+
+//获取swift类
+- (Class)swiftClassFromString:(NSString *)className {
+    NSString *appName = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"];
+    NSString *classStringName = [NSString stringWithFormat:@"_TtC%ld%@%ld%@", appName.length, appName, className.length, className];
+    return NSClassFromString(classStringName);
 }
 
 //返回这个UICollectionView是否可以被选择
