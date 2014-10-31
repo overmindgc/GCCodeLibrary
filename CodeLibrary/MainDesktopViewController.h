@@ -18,8 +18,6 @@
 
 @property (nonatomic, strong) NSArray *currSourceArray;
 
-@property (nonatomic, copy) NSString *typeId;
-
 /*更改title文字*/
 - (void)changeTitleText:(NSString *)text;
 

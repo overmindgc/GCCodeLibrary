@@ -34,9 +34,6 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
         bgColor = [UIColor colorWithRed:60.0f/255.0f green:60.0f/255.0f blue:60.0f/255.0f alpha:1.0f];
         selectColor = [UIColor colorWithRed:51.0f/255.0f green:51.0f/255.0f blue:51.0f/255.0f alpha:1.0f];
         
-        //加载数据源数据
-        NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"collectionSource.plist"];
-        self.types = [[NSArray alloc] initWithContentsOfFile:path];
     }
     return self;
 }

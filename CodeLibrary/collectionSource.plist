@@ -4,6 +4,14 @@
 <array>
 	<dict>
 		<key>typeId</key>
+		<string>0</string>
+		<key>typeName</key>
+		<string> +    所有</string>
+		<key>child</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>typeId</key>
 		<string>1</string>
 		<key>typeName</key>
 		<string>🏠  系统组件</string>
@@ -15,7 +23,7 @@
 				<key>className</key>
 				<string>TableViewExampleTableViewController</string>
 				<key>loadType</key>
-				<integer>1</integer>
+				<string>xib</string>
 			</dict>
 			<dict>
 				<key>labelText</key>
@@ -23,87 +31,7 @@
 				<key>className</key>
 				<string>test</string>
 				<key>loadType</key>
-				<integer>2</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>Swift测试</string>
-				<key>className</key>
-				<string>SwiftViewController</string>
-				<key>loadType</key>
-				<integer>3</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>系统组件1</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
+				<string>storyboard</string>
 			</dict>
 		</array>
 	</dict>
@@ -113,88 +41,7 @@
 		<key>typeName</key>
 		<string>⭐️  自定义组件</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string></string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -202,72 +49,7 @@
 		<key>typeName</key>
 		<string>👀  视图切换</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -275,64 +57,7 @@
 		<key>typeName</key>
 		<string>🍵  图像处理</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -343,51 +68,11 @@
 		<array>
 			<dict>
 				<key>labelText</key>
-				<string>UITableView示例</string>
+				<string>Core Graphics基本绘图</string>
 				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
+				<string>BaseCoreGraphicsViewController</string>
 				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
+				<string>code</string>
 			</dict>
 		</array>
 	</dict>
@@ -397,48 +82,7 @@
 		<key>typeName</key>
 		<string>⬇️  网络开发</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -446,40 +90,7 @@
 		<key>typeName</key>
 		<string>👂  自动布局</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -487,32 +98,7 @@
 		<key>typeName</key>
 		<string>👐  触摸手势</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -520,22 +106,22 @@
 		<key>typeName</key>
 		<string>🐰  感应器开发</string>
 		<key>child</key>
+		<array/>
+	</dict>
+	<dict>
+		<key>typeId</key>
+		<string>9</string>
+		<key>typeName</key>
+		<string>🐰  Swift示例</string>
+		<key>child</key>
 		<array>
 			<dict>
 				<key>labelText</key>
-				<string>UITableView示例</string>
+				<string>Swift测试</string>
 				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
+				<string>SwiftViewController</string>
 				<key>loadType</key>
-				<integer>1</integer>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<integer>1</integer>
+				<string>swift</string>
 			</dict>
 		</array>
 	</dict>

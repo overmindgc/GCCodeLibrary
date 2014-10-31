@@ -23,7 +23,14 @@
     
     //加载数据源数据
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"collectionSource.plist"];
-    NSArray *collectionSource = [[NSArray alloc] initWithContentsOfFile:path];
+    NSMutableArray *collectionSource = [[NSMutableArray alloc] initWithContentsOfFile:path];
+    //合并所有类型的child到所有里边
+    NSMutableArray *allChildArray = [[NSMutableArray alloc] init];
+    for (NSDictionary *dict in collectionSource) {
+        [allChildArray addObjectsFromArray:[dict objectForKey:@"child"]];
+    }
+    NSMutableDictionary *allDict = [collectionSource objectAtIndex:0];
+    [allDict setValue:allChildArray forKey:@"child"];
     
     LeftNavViewController *leftVC = [[LeftNavViewController alloc] init];
     leftVC.types = collectionSource;

@@ -17,6 +17,8 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 /*桌面块颜色*/
 @property (nonatomic, strong) NSArray *colorLibrary;
 
+@property (nonatomic, copy) NSString *defaultTitleText;
+
 @end
 
 @implementation MainDesktopViewController
@@ -28,7 +30,6 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.typeId = @"1";
     
     colorLibrary = @[[UIColor colorWithRed:19.0f/255.0f green:168.0f/255.0f blue:157.0f/255.0f alpha:1.0f],
                      [UIColor colorWithRed:232.0f/255.0f green:82.0f/255.0f blue:112.0f/255.0f alpha:1.0f],
@@ -64,6 +65,10 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
     tipLabel.layer.shadowRadius = 0.5;
     [tableBgView addSubview:tipLabel];
     [self.collectionView setBackgroundView:tableBgView];
+    
+    if (self.defaultTitleText != nil) {
+        self.titleLabel.title = self.defaultTitleText;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -88,6 +93,9 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 
 - (void)changeTitleText:(NSString *)text
 {
+    if (self.defaultTitleText == nil) {
+        self.defaultTitleText = text;
+    }
     self.titleLabel.title = text;
 }
 
@@ -158,11 +166,21 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
 //定义每个UICollectionView 的大小
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-//    if ((indexPath.row + 1) % 3 == 0) {
-//        return CGSizeMake(SCREEN_WIDTH - SCREEN_WIDTH / 3 * 2, SCREEN_WIDTH/3);
-//    } else {
+    if ((currSourceArray.count + 3) % 3 == 1) {
+        if (indexPath.row == currSourceArray.count - 1) {
+            return CGSizeMake(SCREEN_WIDTH, SCREEN_WIDTH/2.8);
+        } else {
+            return CGSizeMake(SCREEN_WIDTH/3.0, SCREEN_WIDTH/2.8);
+        }
+    } else if ((currSourceArray.count + 3) % 3 == 2) {
+        if (indexPath.row == currSourceArray.count - 1 || indexPath.row == currSourceArray.count - 2) {
+            return CGSizeMake(SCREEN_WIDTH/2.0, SCREEN_WIDTH/2.8);
+        } else {
+            return CGSizeMake(SCREEN_WIDTH/3.0, SCREEN_WIDTH/2.8);
+        }
+    } else {
         return CGSizeMake(SCREEN_WIDTH/3.0, SCREEN_WIDTH/2.8);
-//    }
+    }
 }
 
 //定义每个UICollectionView 的 margin
@@ -193,38 +211,28 @@ static NSString * const colorfulCellReuseId = @"colorfulCellReuseId";
     NSDictionary *currDict = [currSourceArray objectAtIndex:indexPath.row];
     NSNumber *type = [currDict objectForKey:@"loadType"];
     NSString *className = [currDict objectForKey:@"className"];
-    switch ([type integerValue]) {
-        case 1: {
-            Class currClass = NSClassFromString(className);
-            UIViewController *currVC = [[currClass alloc] init];
-
-            if (currVC) {
-//                [self.navigationController pushViewController:currVC animated:YES];
-                currVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                [self presentViewController:currVC animated:YES completion:nil];
-            }
-            break;
-        }
-        case 2: {
-            UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:className bundle:[NSBundle mainBundle]];
-            if (storyBoard) {
-                UIViewController *initVC = [storyBoard instantiateInitialViewController];
-//                initVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                [self presentViewController:initVC animated:YES completion:nil];
-//                [self.navigationController pushViewController:initVC animated:YES];
-            }
-            break;
-        }
-        case 3: {
-            Class currClass = [self swiftClassFromString:className];
-            UIViewController *currVC = [[currClass alloc] init];
+    if ([type isEqual:@"code"] || [type isEqual:@"xib"]) {
+        Class currClass = NSClassFromString(className);
+        UIViewController *currVC = [[currClass alloc] init];
+        
+        if (currVC) {
+            //                [self.navigationController pushViewController:currVC animated:YES];
+//            currVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             [self presentViewController:currVC animated:YES completion:nil];
-            break;
         }
-        default:
-            break;
+    } else if ([type isEqual:@"storyboard"]) {
+        UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:className bundle:[NSBundle mainBundle]];
+        if (storyBoard) {
+            UIViewController *initVC = [storyBoard instantiateInitialViewController];
+            //                initVC.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [self presentViewController:initVC animated:YES completion:nil];
+            //                [self.navigationController pushViewController:initVC animated:YES];
+        }
+    } else if ([type isEqual:@"swift"]) {
+        Class currClass = [self swiftClassFromString:className];
+        UIViewController *currVC = [[currClass alloc] init];
+        [self presentViewController:currVC animated:YES completion:nil];
     }
-    
 }
 
 //获取swift类
