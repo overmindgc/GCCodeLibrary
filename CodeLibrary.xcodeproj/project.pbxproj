@@ -12,6 +12,10 @@
 		7B15627C19E7ABE40019A897 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B15627B19E7ABE40019A897 /* Images.xcassets */; };
 		7B15627F19E7ABE40019A897 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B15627D19E7ABE40019A897 /* LaunchScreen.xib */; };
 		7B15628B19E7ABE40019A897 /* CodeLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */; };
+		7B2F65941A073089002ED187 /* NineGridPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */; };
+		7B2F65951A073089002ED187 /* NineGridPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */; };
+		7B2F65981A074CAB002ED187 /* NineGridPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */; };
+		7B2F659B1A074D79002ED187 /* NGGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F659A1A074D79002ED187 /* NGGridView.m */; };
 		7B4FCE2B19EB806000AAE30A /* MainDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FCE2919EB806000AAE30A /* MainDesktopViewController.m */; };
 		7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FCE2A19EB806000AAE30A /* MainDesktopViewController.xib */; };
 		7B5612571A037E3F0003C93E /* BaseCoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5612561A037E3F0003C93E /* BaseCoreGraphicsViewController.m */; };
@@ -52,6 +56,13 @@
 		7B15628419E7ABE40019A897 /* CodeLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B15628919E7ABE40019A897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeLibraryTests.m; sourceTree = "<group>"; };
+		7B2F65911A073089002ED187 /* NineGridPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NineGridPasswordViewController.h; sourceTree = "<group>"; };
+		7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NineGridPasswordViewController.m; sourceTree = "<group>"; };
+		7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NineGridPasswordViewController.xib; sourceTree = "<group>"; };
+		7B2F65961A074CAB002ED187 /* NineGridPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NineGridPasswordView.h; sourceTree = "<group>"; };
+		7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NineGridPasswordView.m; sourceTree = "<group>"; };
+		7B2F65991A074D79002ED187 /* NGGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGGridView.h; sourceTree = "<group>"; };
+		7B2F659A1A074D79002ED187 /* NGGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGGridView.m; sourceTree = "<group>"; };
 		7B4FCE2819EB806000AAE30A /* MainDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDesktopViewController.h; sourceTree = "<group>"; };
 		7B4FCE2919EB806000AAE30A /* MainDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDesktopViewController.m; sourceTree = "<group>"; };
 		7B4FCE2A19EB806000AAE30A /* MainDesktopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDesktopViewController.xib; sourceTree = "<group>"; };
@@ -169,6 +180,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7B2F65901A072E69002ED187 /* customcomps */ = {
+			isa = PBXGroup;
+			children = (
+				7B2F65911A073089002ED187 /* NineGridPasswordViewController.h */,
+				7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */,
+				7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */,
+				7B2F65961A074CAB002ED187 /* NineGridPasswordView.h */,
+				7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */,
+				7B2F65991A074D79002ED187 /* NGGridView.h */,
+				7B2F659A1A074D79002ED187 /* NGGridView.m */,
+			);
+			name = customcomps;
+			sourceTree = "<group>";
+		};
 		7B5612531A037DF70003C93E /* drawandanimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +262,7 @@
 		7BFFA12819F7A5A100E0FE53 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7B2F65901A072E69002ED187 /* customcomps */,
 				7B5612531A037DF70003C93E /* drawandanimation */,
 				7BFFA13319F7B03A00E0FE53 /* systemcomp */,
 				7B5612581A037E8F0003C93E /* swift */,
@@ -360,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */,
+				7B2F65951A073089002ED187 /* NineGridPasswordViewController.xib in Resources */,
 				7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */,
 				7B6811F519ED0D550081FA88 /* ColorfulButtonCell.xib in Resources */,
 				7B64819819FF762A006A1D1F /* collectionSource.plist in Resources */,
@@ -389,6 +416,7 @@
 				7BFFA12D19F7A62700E0FE53 /* TableViewExampleTableViewController.m in Sources */,
 				7BFFA13119F7A91D00E0FE53 /* MainNavigationViewController.m in Sources */,
 				7B6811F419ED0D550081FA88 /* ColorfulButtonCell.m in Sources */,
+				7B2F65941A073089002ED187 /* NineGridPasswordViewController.m in Sources */,
 				7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */,
 				7B15627419E7ABE40019A897 /* AppDelegate.m in Sources */,
 				7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */,
@@ -396,7 +424,9 @@
 				7B9B03A319EE5FE20039470F /* ICSDrawerController.m in Sources */,
 				7B5612571A037E3F0003C93E /* BaseCoreGraphicsViewController.m in Sources */,
 				7B15627119E7ABE40019A897 /* main.m in Sources */,
+				7B2F659B1A074D79002ED187 /* NGGridView.m in Sources */,
 				7B56125B1A03814D0003C93E /* BaseCoreGraphicsView.m in Sources */,
+				7B2F65981A074CAB002ED187 /* NineGridPasswordView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

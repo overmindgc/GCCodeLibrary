@@ -9,6 +9,7 @@
 #import "LeftNavViewController.h"
 #import "MainDesktopViewController.h"
 
+static const CGFloat TableWidth = 200.0f;
 static const CGFloat TopViewHight = 30.0f;
 static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewControllerCellReuseId";
 
@@ -48,13 +49,13 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
     
     UIView *topView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, TopViewHight)];
     topView.backgroundColor = selectColor;
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(17, 0, 200, TopViewHight)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(17, 0, TableWidth, TopViewHight)];
     titleLabel.text = @"分类导航";
     titleLabel.textColor = [UIColor whiteColor];
     [topView addSubview:titleLabel];
     [self.view addSubview:topView];
     
-    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, TopViewHight, SCREEN_WIDTH, SCREEN_HEIGHT - TopViewHight)];
+    self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, TopViewHight, TableWidth, SCREEN_HEIGHT - TopViewHight)];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     self.tableView.backgroundColor = bgColor;
@@ -102,6 +103,7 @@ static NSString * const ColorsViewControllerCellReuseId = @"ColorsViewController
                                                             forIndexPath:indexPath];
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
     cell.selectedBackgroundView.backgroundColor = selectColor;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSDictionary *rowDict = [self.types objectAtIndex:indexPath.row];
     cell.textLabel.text = [rowDict valueForKey:@"typeName"];
     cell.textLabel.textColor = [UIColor whiteColor];

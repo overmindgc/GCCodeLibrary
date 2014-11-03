@@ -16,24 +16,7 @@
 		<key>typeName</key>
 		<string>🏠  系统组件</string>
 		<key>child</key>
-		<array>
-			<dict>
-				<key>labelText</key>
-				<string>UITableView示例</string>
-				<key>className</key>
-				<string>TableViewExampleTableViewController</string>
-				<key>loadType</key>
-				<string>xib</string>
-			</dict>
-			<dict>
-				<key>labelText</key>
-				<string>store</string>
-				<key>className</key>
-				<string>test</string>
-				<key>loadType</key>
-				<string>storyboard</string>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<dict>
 		<key>typeId</key>
@@ -41,7 +24,16 @@
 		<key>typeName</key>
 		<string>⭐️  自定义组件</string>
 		<key>child</key>
-		<array/>
+		<array>
+			<dict>
+				<key>labelText</key>
+				<string>九宫格解锁</string>
+				<key>className</key>
+				<string>NineGridPasswordViewController</string>
+				<key>loadType</key>
+				<string>xib</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>typeId</key>
