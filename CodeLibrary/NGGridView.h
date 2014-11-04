@@ -10,6 +10,13 @@
 
 @interface NGGridView : UIView
 
+/*格子编号*/
+@property NSInteger *gridNo;
+
 @property BOOL isSelected;
+
+@property BOOL isError;
+
+- (void)setSelected:(BOOL)selected withError:(BOOL)error;
 
 @end

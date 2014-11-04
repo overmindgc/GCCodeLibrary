@@ -11,14 +11,24 @@
 #define CircleWidth SCREEN_WIDTH * 0.195
 
 @implementation NGGridView
+{
+    UIColor *defaultColor;
+    UIColor *selectedColor;
+    UIColor *errorColor;
+}
 
 @synthesize isSelected;
+@synthesize isError;
 
-- (id)init
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super init];
+    self = [super initWithFrame:frame];
     if (self) {
         isSelected = NO;
+        isError = NO;
+        defaultColor = [UIColor colorWithRed:107.0f/255.0f green:125.0f/255.0f blue:146.0f/255.0f alpha:1.0f];
+        selectedColor = [UIColor colorWithRed:4.0f/255.0f green:174.0f/255.0f blue:238.0f/255.0f alpha:1.0f];
+        errorColor = [UIColor colorWithRed:208.0f/255.0f green:52.0f/255.0f blue:19.0f/255.0f alpha:1.0f];
     }
     return self;
 }
@@ -29,15 +39,10 @@
     // Drawing code
     
     if (isSelected) {
-        [self drawSelectedCircle];
+        [self drawSelectedCircleWithError:isError];
     } else {
         [self drawCircle];
     }
-    
-
-    UITapGestureRecognizer *tapSelected = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(touchSelected:)];
-    self.userInteractionEnabled = YES;
-    [self addGestureRecognizer:tapSelected];
 }
 
 #pragma mark 绘制默认圆
@@ -49,8 +54,8 @@
     CGContextAddEllipseInRect(context, rect);
     //设置属性
     CGContextSetLineWidth(context, 2.0);//设置线条宽度
-//    [[UIColor colorWithRed:88.0f/255.0f green:105.0f/255.0f blue:127.0f/255.0f alpha:1.0f] set];
-    CGContextSetRGBStrokeColor(context, 107.0f/255.0f, 125.0f/255.0f, 146.0f/255.0f, 1.0f);//设置笔触颜色
+    [defaultColor set];//设置笔触颜色
+//    CGContextSetRGBStrokeColor(context, defaultColor);//设置笔触颜色
     //绘制
     CGContextDrawPath(context, kCGPathStroke);
     
@@ -59,7 +64,7 @@
 }
 
 #pragma mark 绘制选中圆
--(void)drawSelectedCircle
+-(void)drawSelectedCircleWithError:(BOOL)error
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -69,8 +74,12 @@
     CGContextAddEllipseInRect(context, rect);
     //设置属性
     CGContextSetLineWidth(context, 2.0);//设置线条宽度
-    //    [[UIColor colorWithRed:88.0f/255.0f green:105.0f/255.0f blue:127.0f/255.0f alpha:1.0f] set];
-    CGContextSetRGBStrokeColor(context, 4.0f/255.0f, 174.0f/255.0f, 238.0f/255.0f, 1.0f);//设置笔触颜色
+    if (isError) {
+        [errorColor set];//设置笔触颜色
+    } else {
+        [selectedColor set];//设置笔触颜色
+    }
+//    CGContextSetRGBStrokeColor(context, 4.0f/255.0f, 174.0f/255.0f, 238.0f/255.0f, 1.0f);//设置笔触颜色
     //设置填充颜色
     UIColor*fillColor = [UIColor colorWithRed:25.0f/255.0f green:55.0f/255.0f blue:92.0f/255.0f alpha:1.0f];
     CGContextSetFillColorWithColor(context, fillColor.CGColor);//填充颜色
@@ -83,15 +92,20 @@
     CGRect centerRect = CGRectMake(centXY, centXY, centerCircleWidth, centerCircleWidth);
     CGContextAddEllipseInRect(context, centerRect);
     //设置填充颜色
-    UIColor*centerColor = [UIColor colorWithRed:4.0f/255.0f green:174.0f/255.0f blue:238.0f/255.0f alpha:1.0f];
-    CGContextSetFillColorWithColor(context, centerColor.CGColor);//填充颜色
+    if (isError) {
+        CGContextSetFillColorWithColor(context, errorColor.CGColor);//填充颜色
+    } else {
+        CGContextSetFillColorWithColor(context, selectedColor.CGColor);//填充颜色
+    }
+    
     //绘制
     CGContextDrawPath(context, kCGPathFill);
 }
 
-- (void)touchSelected:(UISwipeGestureRecognizer *)gestureRecognizer
+- (void)setSelected:(BOOL)selected withError:(BOOL)error
 {
-    isSelected = !isSelected;
+    isSelected = selected;
+    isError = error;
     [self setNeedsDisplay];
 }
 

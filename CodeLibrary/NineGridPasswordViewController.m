@@ -15,9 +15,12 @@
 
 @implementation NineGridPasswordViewController
 
+@synthesize titleLabel,passwordLabel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    passwordLabel.text = @"";
     
     UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(10, 30, 60, 30)];
     closeBtn.backgroundColor = [UIColor orangeColor];
@@ -25,8 +28,12 @@
     [closeBtn addTarget:self action:@selector(closeAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:closeBtn];
     
-    NineGridPasswordView *nineGideView = [[NineGridPasswordView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-    [self.view insertSubview:nineGideView atIndex:0];
+    double gridViewWidth = SCREEN_WIDTH * 0.83;
+    double gridY = SCREEN_HEIGHT - gridViewWidth - SCREEN_WIDTH * 0.195 - 10;
+    NineGridPasswordView *nineGideView = [[NineGridPasswordView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - gridViewWidth / 2, gridY, gridViewWidth, gridViewWidth)];
+    nineGideView.delegete = self;
+    nineGideView.correctPassword = @"12357";
+    [self.view addSubview:nineGideView];
 }
 
 //设置状态栏亮白色样式
@@ -40,6 +47,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark NineGridPasswordDelegate
+/*密码输入正确回调*/
+- (void)passwordView:(NineGridPasswordView *)passwordView withCorrectPassword:(NSString *)password
+{
+    [titleLabel setTextColor:[UIColor colorWithRed:128.0f/255.0f green:128.0f/255.0f blue:128.0f/255.0f alpha:1.0f]];
+    [passwordLabel setTextColor:[UIColor colorWithRed:128.0f/255.0f green:128.0f/255.0f blue:128.0f/255.0f alpha:1.0f]];
+    titleLabel.text = @"恭喜你密码正确";
+    passwordLabel.text = password;
+}
+
+/*密码输入错误回调*/
+- (void)passwordView:(NineGridPasswordView *)passwordView withErrorPassword:(NSInteger)errorTime
+{
+    [titleLabel setTextColor:[UIColor colorWithRed:208.0f/255.0f green:52.0f/255.0f blue:19.0f/255.0f alpha:1.0f]];
+    [passwordLabel setTextColor:[UIColor colorWithRed:208.0f/255.0f green:52.0f/255.0f blue:19.0f/255.0f alpha:1.0f]];
+    titleLabel.text = @"对不起密码输入错误";
+    passwordLabel.text = [NSString stringWithFormat:@"%ld次",errorTime];
 }
 
 - (void) closeAction

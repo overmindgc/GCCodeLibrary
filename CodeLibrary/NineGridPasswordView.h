@@ -8,9 +8,24 @@
 
 #import <UIKit/UIKit.h>
 
+@class NineGridPasswordView;
+
+@protocol NineGridPasswordDelegate <NSObject>
+
+/*密码输入正确回调*/
+- (void)passwordView:(NineGridPasswordView *)passwordView withCorrectPassword:(NSString *)password;
+
+/*密码输入错误回调*/
+- (void)passwordView:(NineGridPasswordView *)passwordView withErrorPassword:(NSInteger)errorTime;
+
+@end
+
 @interface NineGridPasswordView : UIView
 
-/*保存九宫格视图*/
-@property (nonatomic, strong) NSMutableArray *gridArray;
+/*正确的密码*/
+@property (nonatomic, copy) NSString *correctPassword;
+
+@property (nonatomic, weak) id<NineGridPasswordDelegate>delegete;
+
 
 @end

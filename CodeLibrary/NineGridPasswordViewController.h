@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NineGridPasswordView.h"
 
-@interface NineGridPasswordViewController : UIViewController
+@interface NineGridPasswordViewController : UIViewController <NineGridPasswordDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *passwordLabel;
 
 @end

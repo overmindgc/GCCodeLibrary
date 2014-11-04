@@ -27,6 +27,7 @@
 		7B9B03A319EE5FE20039470F /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A019EE5FE20039470F /* ICSDrawerController.m */; };
 		7B9B03A419EE5FE20039470F /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A219EE5FE20039470F /* ICSDropShadowView.m */; };
 		7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A719EE61A30039470F /* LeftNavViewController.m */; };
+		7BA7A90F1A086A0800D5DE62 /* NineGridBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7A90E1A086A0800D5DE62 /* NineGridBackgroundView.m */; };
 		7BC20D9B1A01CEF200F1A86B /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC20D9A1A01CEF200F1A86B /* SwiftViewController.swift */; };
 		7BC5558619F4F56F004B0420 /* AppConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5558519F4F56F004B0420 /* AppConsts.m */; };
 		7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */; };
@@ -83,6 +84,8 @@
 		7B9B03A219EE5FE20039470F /* ICSDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDropShadowView.m; sourceTree = "<group>"; };
 		7B9B03A619EE61A30039470F /* LeftNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftNavViewController.h; sourceTree = "<group>"; };
 		7B9B03A719EE61A30039470F /* LeftNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftNavViewController.m; sourceTree = "<group>"; };
+		7BA7A90D1A086A0800D5DE62 /* NineGridBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NineGridBackgroundView.h; sourceTree = "<group>"; };
+		7BA7A90E1A086A0800D5DE62 /* NineGridBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NineGridBackgroundView.m; sourceTree = "<group>"; };
 		7BC20D991A01CEF100F1A86B /* CodeLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BC20D9A1A01CEF200F1A86B /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		7BC5558419F4F56F004B0420 /* AppConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConsts.h; sourceTree = "<group>"; };
@@ -183,13 +186,7 @@
 		7B2F65901A072E69002ED187 /* customcomps */ = {
 			isa = PBXGroup;
 			children = (
-				7B2F65911A073089002ED187 /* NineGridPasswordViewController.h */,
-				7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */,
-				7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */,
-				7B2F65961A074CAB002ED187 /* NineGridPasswordView.h */,
-				7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */,
-				7B2F65991A074D79002ED187 /* NGGridView.h */,
-				7B2F659A1A074D79002ED187 /* NGGridView.m */,
+				7BA7A9101A08CA7E00D5DE62 /* ninegridpassword */,
 			);
 			name = customcomps;
 			sourceTree = "<group>";
@@ -248,6 +245,22 @@
 				7B9B039E19EE5FE20039470F /* ICSDrawerController */,
 			);
 			name = opensourcecomps;
+			sourceTree = "<group>";
+		};
+		7BA7A9101A08CA7E00D5DE62 /* ninegridpassword */ = {
+			isa = PBXGroup;
+			children = (
+				7B2F65911A073089002ED187 /* NineGridPasswordViewController.h */,
+				7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */,
+				7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */,
+				7BA7A90D1A086A0800D5DE62 /* NineGridBackgroundView.h */,
+				7BA7A90E1A086A0800D5DE62 /* NineGridBackgroundView.m */,
+				7B2F65961A074CAB002ED187 /* NineGridPasswordView.h */,
+				7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */,
+				7B2F65991A074D79002ED187 /* NGGridView.h */,
+				7B2F659A1A074D79002ED187 /* NGGridView.m */,
+			);
+			name = ninegridpassword;
 			sourceTree = "<group>";
 		};
 		7BC20D981A01CECD00F1A86B /* swifttest */ = {
@@ -422,6 +435,7 @@
 				7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */,
 				7B9B03A419EE5FE20039470F /* ICSDropShadowView.m in Sources */,
 				7B9B03A319EE5FE20039470F /* ICSDrawerController.m in Sources */,
+				7BA7A90F1A086A0800D5DE62 /* NineGridBackgroundView.m in Sources */,
 				7B5612571A037E3F0003C93E /* BaseCoreGraphicsViewController.m in Sources */,
 				7B15627119E7ABE40019A897 /* main.m in Sources */,
 				7B2F659B1A074D79002ED187 /* NGGridView.m in Sources */,
