@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, NGGridArrowAngle) {
+    NGGridArrowAngleNone = -1,
+};
+
 @interface NGGridView : UIView
 
 /*格子编号*/
@@ -15,8 +19,15 @@
 
 @property BOOL isSelected;
 
-@property BOOL isError;
+/*默认未选中颜色*/
+@property (nonatomic, strong) UIColor *defaultColor;
+/*选中的颜色*/
+@property (nonatomic, strong) UIColor *selectedColor;
+/*错误的颜色*/
+@property (nonatomic, strong) UIColor *errorColor;
+/*选中的圆填充颜色*/
+@property (nonatomic, strong) UIColor *circleFillColor;
 
-- (void)setSelected:(BOOL)selected withError:(BOOL)error;
+- (void)setSelected:(BOOL)selected withArrowAngle:(NSInteger)angle isError:(BOOL)error;
 
 @end

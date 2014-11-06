@@ -32,7 +32,7 @@
     double gridY = SCREEN_HEIGHT - gridViewWidth - SCREEN_WIDTH * 0.195 - 10;
     NineGridPasswordView *nineGideView = [[NineGridPasswordView alloc] initWithFrame:CGRectMake(SCREEN_WIDTH / 2 - gridViewWidth / 2, gridY, gridViewWidth, gridViewWidth)];
     nineGideView.delegete = self;
-    nineGideView.correctPassword = @"12357";
+    nineGideView.correctPassword = @"167294385";
     [self.view addSubview:nineGideView];
 }
 

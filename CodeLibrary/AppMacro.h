@@ -8,7 +8,6 @@
 /**
  *  系统常量有关的宏
  **/
-#define PI 3.14159265358979323846
 /*屏幕宽高*/
 #define  SCREEN_WIDTH   [[UIScreen mainScreen] bounds].size.width
 #define  SCREEN_HEIGHT  [[UIScreen mainScreen] bounds].size.height

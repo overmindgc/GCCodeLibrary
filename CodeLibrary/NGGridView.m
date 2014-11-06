@@ -12,13 +12,13 @@
 
 @implementation NGGridView
 {
-    UIColor *defaultColor;
-    UIColor *selectedColor;
-    UIColor *errorColor;
+    BOOL isError;
+    NSInteger currAngle;
 }
 
 @synthesize isSelected;
-@synthesize isError;
+
+@synthesize defaultColor,selectedColor,errorColor,circleFillColor;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -26,9 +26,7 @@
     if (self) {
         isSelected = NO;
         isError = NO;
-        defaultColor = [UIColor colorWithRed:107.0f/255.0f green:125.0f/255.0f blue:146.0f/255.0f alpha:1.0f];
-        selectedColor = [UIColor colorWithRed:4.0f/255.0f green:174.0f/255.0f blue:238.0f/255.0f alpha:1.0f];
-        errorColor = [UIColor colorWithRed:208.0f/255.0f green:52.0f/255.0f blue:19.0f/255.0f alpha:1.0f];
+        currAngle = NGGridArrowAngleNone;
     }
     return self;
 }
@@ -39,7 +37,7 @@
     // Drawing code
     
     if (isSelected) {
-        [self drawSelectedCircleWithError:isError];
+        [self drawSelectedCircleWithArrow:currAngle isError:isError];
     } else {
         [self drawCircle];
     }
@@ -59,12 +57,10 @@
     //绘制
     CGContextDrawPath(context, kCGPathStroke);
     
-    //画中心园
-    
 }
 
 #pragma mark 绘制选中圆
--(void)drawSelectedCircleWithError:(BOOL)error
+-(void)drawSelectedCircleWithArrow:(NSInteger)angle isError:(BOOL)error
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
@@ -81,7 +77,7 @@
     }
 //    CGContextSetRGBStrokeColor(context, 4.0f/255.0f, 174.0f/255.0f, 238.0f/255.0f, 1.0f);//设置笔触颜色
     //设置填充颜色
-    UIColor*fillColor = [UIColor colorWithRed:25.0f/255.0f green:55.0f/255.0f blue:92.0f/255.0f alpha:1.0f];
+    UIColor*fillColor = circleFillColor;
     CGContextSetFillColorWithColor(context, fillColor.CGColor);//填充颜色
     //绘制
     CGContextDrawPath(context, kCGPathFillStroke);
@@ -100,13 +96,55 @@
     
     //绘制
     CGContextDrawPath(context, kCGPathFill);
+    
+    if (angle != NGGridArrowAngleNone) {
+        //利用path进行绘制三角箭头
+        
+        //三角形的底边长和高
+        float triangleBaseWidth = centerCircleWidth * 0.5;
+        float triangleHight = triangleBaseWidth * 0.7;
+        //圆心坐标
+        CGPoint circleCenterPoint = CGPointMake(CircleWidth/2 + 1, CircleWidth/2 + 1);
+        //计算出顶部三角的三个点坐标，其他的三角的坐标就可以推算出来了
+        float topBeginY = (CircleWidth/2 - centerCircleWidth/2)/2 - triangleHight/2.4;
+        CGPoint triangleTopPoint = CGPointMake(CircleWidth/2 + 1, topBeginY);
+        CGPoint triangleLeftPoint = CGPointMake(CircleWidth/2 - triangleBaseWidth/2 + 1, topBeginY + triangleHight);
+        CGPoint triangleRightPoint = CGPointMake(CircleWidth/2 + triangleBaseWidth/2 + 1, topBeginY + triangleHight);
+        
+        CGPoint currTopPoint = [self rotaryAngle:angle withPoint:triangleTopPoint andCenter:circleCenterPoint];
+        CGPoint currLeftPoint = [self rotaryAngle:angle withPoint:triangleLeftPoint andCenter:circleCenterPoint];
+        CGPoint currRightPoint = [self rotaryAngle:angle withPoint:triangleRightPoint andCenter:circleCenterPoint];
+        
+        CGContextBeginPath(context);//标记
+        CGContextMoveToPoint(context,currTopPoint.x,currTopPoint.y);//设置起点
+        CGContextAddLineToPoint(context,currLeftPoint.x,currLeftPoint.y);
+        CGContextAddLineToPoint(context,currRightPoint.x,currRightPoint.y);
+        CGContextClosePath(context);//路径结束标志，不写默认封闭
+        CGContextDrawPath(context,kCGPathFill);//绘制路径path
+    }
+    
 }
 
-- (void)setSelected:(BOOL)selected withError:(BOOL)error
+- (void)setSelected:(BOOL)selected withArrowAngle:(NSInteger)angle isError:(BOOL)error
 {
     isSelected = selected;
     isError = error;
+    currAngle = angle;
     [self setNeedsDisplay];
+}
+
+/**
+ 假设对图片上任意点(x,y)，绕一个坐标点(rx0,ry0)逆时针旋转RotaryAngle角度后的新的坐标设为(x', y')，有公式：
+ x'= (x - rx0)*cos(RotaryAngle) + (y - ry0)*sin(RotaryAngle) + rx0 ;
+ y'=-(x - rx0)*sin(RotaryAngle) + (y - ry0)*cos(RotaryAngle) + ry0 ;
+ radian = angle * PI / 180; //角度变成弧度
+ */
+- (CGPoint)rotaryAngle:(NSInteger)angle withPoint:(CGPoint)point andCenter:(CGPoint)centerPoint
+{
+    float radian = angle * M_PI / 180;
+    float newX = (point.x - centerPoint.x) * cosf(radian) + (point.y - centerPoint.y) * sinf(radian) + centerPoint.x;
+    float newY = -(point.x - centerPoint.x) * sinf(radian) + (point.y - centerPoint.y) * cosf(radian) + centerPoint.y;
+    return CGPointMake(newX, newY);
 }
 
 @end

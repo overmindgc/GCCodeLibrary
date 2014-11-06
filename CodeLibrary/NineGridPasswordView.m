@@ -13,6 +13,15 @@
 
 @interface NineGridPasswordView ()
 
+/*默认未选中颜色*/
+@property (nonatomic, strong) UIColor *defaultColor;
+/*选中的颜色*/
+@property (nonatomic, strong) UIColor *selectedColor;
+/*错误的颜色*/
+@property (nonatomic, strong) UIColor *errorColor;
+/*选中的圆填充颜色*/
+@property (nonatomic, strong) UIColor *circleFillColor;
+
 /*是否是画轨迹模式*/
 @property BOOL isTracking;
 /*是否是错误模式*/
@@ -30,12 +39,12 @@
 
 @implementation NineGridPasswordView
 {
-    UIColor *errorColor;
-    UIColor *selectedColor;
     NSInteger errorTime;
 }
 
 @synthesize correctPassword;
+
+@synthesize defaultColor,selectedColor,errorColor,circleFillColor;
 
 @synthesize gridArray;
 
@@ -52,15 +61,16 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
+        defaultColor = [UIColor colorWithRed:107.0f/255.0f green:125.0f/255.0f blue:146.0f/255.0f alpha:1.0f];
         selectedColor = [UIColor colorWithRed:4.0f/255.0f green:174.0f/255.0f blue:238.0f/255.0f alpha:1.0f];
         errorColor = [UIColor colorWithRed:208.0f/255.0f green:52.0f/255.0f blue:19.0f/255.0f alpha:1.0f];
+        circleFillColor = [UIColor colorWithRed:25.0f/255.0f green:55.0f/255.0f blue:92.0f/255.0f alpha:1.0f];
         isTracking = NO;
         errorTime = 0;
         gridArray = [[NSMutableArray alloc] init];
         selectedGridArray = [[NSMutableArray alloc] init];
         pathPointArray = [[NSMutableArray alloc] init];
         fixedDotCount = 0;
-        
         //添加九个宫格视图
         double viewWidth = self.frame.size.width;
         double gridGap = (viewWidth - GridWidth * 3) / 2;
@@ -70,6 +80,10 @@
                 NGGridView *gridView = [[NGGridView alloc] initWithFrame:CGRectMake(gridX, GridWidth * n + gridGap * n, GridWidth + 2, GridWidth + 2)];
                 gridView.backgroundColor = [UIColor clearColor];
                 gridView.gridNo = i + 1 + n * 3;
+                gridView.defaultColor = defaultColor;
+                gridView.selectedColor = selectedColor;
+                gridView.errorColor = errorColor;
+                gridView.circleFillColor = circleFillColor;
                 [self addSubview:gridView];
                 [gridArray addObject:gridView];
             }
@@ -120,10 +134,7 @@
 {
     [super touchesBegan:touches withEvent:event];
     
-    if (isError == YES) {
-        isError = NO;
-        [self resetTrackingState];
-    }
+    [self resetTrackingState];
     
     isTracking = YES;
     
@@ -133,7 +144,7 @@
     //判断是否在圆上，是就选中
     for (NGGridView *currGridView in gridArray) {
         if ([self containPoint:currPoint inCircle:currGridView.frame]) {
-            [currGridView setSelected:YES withError:NO];
+            [currGridView setSelected:YES withArrowAngle:NGGridArrowAngleNone isError:NO];
             [selectedGridArray addObject:currGridView];
             [pathPointArray addObject:[NSValue valueWithCGPoint:[self centerPointByFrame:currGridView.frame]]];
             fixedDotCount++;
@@ -155,7 +166,7 @@
     for (NGGridView *currGridView in gridArray) {
         if ([self containPoint:currPoint inCircle:currGridView.frame]) {
             if (![currGridView isSelected]) {
-                [currGridView setSelected:YES withError:NO];
+                [currGridView setSelected:YES withArrowAngle:NGGridArrowAngleNone isError:NO];
                 [selectedGridArray addObject:currGridView];
                 if (pathPointArray.count == fixedDotCount) {
                     [pathPointArray addObject:[NSValue valueWithCGPoint:[self centerPointByFrame:currGridView.frame]]];
@@ -164,6 +175,7 @@
                 }
                 
                 fixedDotCount++;
+                [self addArrowToNGGridViews:selectedGridArray isError:NO];
             }
             break;
         }
@@ -177,7 +189,6 @@
         } else {
             [pathPointArray replaceObjectAtIndex:pathPointArray.count - 1 withObject:currPointValue];
         }
-        
     }
     [self setNeedsDisplay];
 }
@@ -189,21 +200,27 @@
     {
         NSString *currPassword = [self getPassword:selectedGridArray];
         if ([currPassword isEqualToString:correctPassword]) {
+            if (pathPointArray.count > fixedDotCount) {
+                [pathPointArray removeLastObject];
+                [self setNeedsDisplay];
+            }
             [self.delegete passwordView:self withCorrectPassword:[self getPassword:selectedGridArray]];
-            [self resetTrackingState];
+//            [self resetTrackingState];
             errorTime = 0;
             isError = NO;
+            [self addArrowToNGGridViews:selectedGridArray isError:NO];
         } else {
             if (pathPointArray.count > fixedDotCount) {
                 [pathPointArray removeLastObject];
                 for (NGGridView *sGridView in selectedGridArray) {
-                    [sGridView setSelected:YES withError:YES];
+                    [sGridView setSelected:YES withArrowAngle:NGGridArrowAngleNone isError:YES];
                 }
                 [self setNeedsDisplay];
             }
             isError = YES;
             errorTime++;
             [self.delegete passwordView:self withErrorPassword:errorTime];
+            [self addArrowToNGGridViews:selectedGridArray isError:YES];
         }
     } else {
         [self resetTrackingState];
@@ -220,8 +237,9 @@
 - (void)resetTrackingState
 {
     isTracking = NO;
+    isError = NO;
     for (NGGridView *nGrid in gridArray) {
-        [nGrid setSelected:NO withError:NO];
+        [nGrid setSelected:NO withArrowAngle:NGGridArrowAngleNone isError:NO];
     }
     [selectedGridArray removeAllObjects];
     [pathPointArray removeAllObjects];
@@ -236,6 +254,39 @@
     CGPoint center = CGPointMake(rect.origin.x + circleRadius, rect.origin.y + circleRadius);
     BOOL isContain = ((center.x - point.x) * (center.x - point.x) + (center.y - point.y) * (center.y - point.y) - circleRadius * circleRadius) < 0;
     return isContain;
+}
+
+//给数组里的宫格加箭头
+- (void)addArrowToNGGridViews:(NSArray *)gArray isError:(BOOL)error
+{
+    if (gArray.count > 1) {
+        NGGridView *lastGridView = [gArray objectAtIndex:0];
+        for (NSInteger i=0; i<gArray.count; i++) {
+            if (i > 0) {
+                NGGridView *currGrid = [gArray objectAtIndex:i];
+                [lastGridView setSelected:YES withArrowAngle:[self directionByOnePoint:lastGridView.center toAnotherPoint:currGrid.center] isError:error];
+                lastGridView = currGrid;
+            }
+        }
+    }
+}
+
+/**
+ 根据两点坐标返回与垂直向上方向的夹角
+ 角a = arctan(a/b)
+ 用反正切、反余切求角度
+ */
+- (NSInteger)directionByOnePoint:(CGPoint)point1 toAnotherPoint:(CGPoint)point2
+{
+    float sideA = point2.x - point1.x;
+    float sideB = point2.y - point1.y;
+    float angle = atanf(sideA / sideB) * 180 / M_PI;
+    if (point1.y > point2.y) {
+        return angle;
+    } else {
+        return angle - 180;
+    }
+    return angle;
 }
 
 //通过fame取得中心点

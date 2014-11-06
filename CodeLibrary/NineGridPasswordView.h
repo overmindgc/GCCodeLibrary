@@ -22,10 +22,9 @@
 
 @interface NineGridPasswordView : UIView
 
-/*正确的密码*/
-@property (nonatomic, copy) NSString *correctPassword;
-
 @property (nonatomic, weak) id<NineGridPasswordDelegate>delegete;
 
+/*正确的密码*/
+@property (nonatomic, copy) NSString *correctPassword;
 
 @end
