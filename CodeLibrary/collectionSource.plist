@@ -66,6 +66,22 @@
 				<key>loadType</key>
 				<string>code</string>
 			</dict>
+			<dict>
+				<key>labelText</key>
+				<string>CaLayer基本示例</string>
+				<key>className</key>
+				<string>CaLayerBaseViewController</string>
+				<key>loadType</key>
+				<string>xib</string>
+			</dict>
+			<dict>
+				<key>labelText</key>
+				<string>CAAnimation基础示例</string>
+				<key>className</key>
+				<string>AnimationBaseViewController</string>
+				<key>loadType</key>
+				<string>xib</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
