@@ -7,8 +7,8 @@
 //
 
 #import "AnimationBaseViewController.h"
-#define PHOTO_HEIGHT 150
-#define PHOTO_CENTER_HEIGHT 25
+#define PHOTO_HEIGHT 200
+#define PHOTO_CENTER_HEIGHT 30
 
 @interface AnimationBaseViewController (){
     CALayer *_layer;
@@ -126,12 +126,12 @@
     CGContextDrawPath(ctx, kCGPathFillStroke);
     
     //中心外层圆圈
-    float centerOutHight = PHOTO_CENTER_HEIGHT + 4;
+    float centerOutHight = PHOTO_CENTER_HEIGHT + 6;
     CGRect rectOut = CGRectMake(PHOTO_HEIGHT/2 - centerOutHight/2, PHOTO_HEIGHT/2 - centerOutHight/2, centerOutHight, centerOutHight);
     CGContextAddEllipseInRect(ctx, rectOut);
-    CGContextSetLineWidth(ctx, 2.0);//线的宽度
+    CGContextSetLineWidth(ctx, 4.0);//线的宽度
     //设置属性
-    CGContextSetStrokeColorWithColor(ctx,[UIColor colorWithWhite:0.1 alpha:1].CGColor);
+    CGContextSetStrokeColorWithColor(ctx,[UIColor colorWithWhite:0.2 alpha:1].CGColor);
     //绘制
     CGContextDrawPath(ctx, kCGPathStroke);
     
