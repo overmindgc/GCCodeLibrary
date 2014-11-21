@@ -67,4 +67,10 @@
     CGImageRelease(temp);//释放CGImage对象
 }
 
+- (void)changeAlbumWithImageName:(NSString *)newImageName
+{
+    bgImageName = newImageName;
+    [self setNeedsDisplay];
+}
+
 @end

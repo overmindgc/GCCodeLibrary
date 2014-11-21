@@ -16,9 +16,10 @@
 		7B15627C19E7ABE40019A897 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B15627B19E7ABE40019A897 /* Images.xcassets */; };
 		7B15627F19E7ABE40019A897 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B15627D19E7ABE40019A897 /* LaunchScreen.xib */; };
 		7B15628B19E7ABE40019A897 /* CodeLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */; };
+		7B15AA7C1A1C3394009F593A /* Waltzing Leaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B15AA7B1A1C3394009F593A /* Waltzing Leaves.mp3 */; };
 		7B1ED5E11A1AF35C00751C4F /* CDPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1ED5DF1A1AF35C00751C4F /* CDPlayerViewController.m */; };
 		7B1ED5EA1A1AF47300751C4F /* AlbumBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1ED5E91A1AF47300751C4F /* AlbumBackgroundView.m */; };
-		7B1ED5EE1A1B07EC00751C4F /* Try-ColbieCaillat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1ED5ED1A1B07EC00751C4F /* Try-ColbieCaillat.mp3 */; };
+		7B1ED5EE1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1ED5ED1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 */; };
 		7B2F65941A073089002ED187 /* NineGridPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */; };
 		7B2F65951A073089002ED187 /* NineGridPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */; };
 		7B2F65981A074CAB002ED187 /* NineGridPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */; };
@@ -42,6 +43,8 @@
 		7BC5558619F4F56F004B0420 /* AppConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5558519F4F56F004B0420 /* AppConsts.m */; };
 		7BC9B8F21A1B10E100356C78 /* CDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9B8F11A1B10E100356C78 /* CDView.m */; };
 		7BC9B8F41A1B363600356C78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9B8F31A1B363600356C78 /* AVFoundation.framework */; };
+		7BCD021C1A1C93C9006735EA /* CDPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCD021B1A1C93C9006735EA /* CDPlayerViewController.xib */; };
+		7BCD78AD1A1F07A30015E99D /* CDLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCD78AC1A1F07A30015E99D /* CDLayerView.m */; };
 		7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */; };
 		7BFFA12D19F7A62700E0FE53 /* TableViewExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFFA12B19F7A62700E0FE53 /* TableViewExampleTableViewController.m */; };
 		7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFA12C19F7A62700E0FE53 /* TableViewExampleTableViewController.xib */; };
@@ -76,11 +79,12 @@
 		7B15628419E7ABE40019A897 /* CodeLibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeLibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B15628919E7ABE40019A897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeLibraryTests.m; sourceTree = "<group>"; };
+		7B15AA7B1A1C3394009F593A /* Waltzing Leaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Waltzing Leaves.mp3"; sourceTree = "<group>"; };
 		7B1ED5DE1A1AF35C00751C4F /* CDPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPlayerViewController.h; sourceTree = "<group>"; };
 		7B1ED5DF1A1AF35C00751C4F /* CDPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPlayerViewController.m; sourceTree = "<group>"; };
 		7B1ED5E81A1AF47300751C4F /* AlbumBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumBackgroundView.h; sourceTree = "<group>"; };
 		7B1ED5E91A1AF47300751C4F /* AlbumBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumBackgroundView.m; sourceTree = "<group>"; };
-		7B1ED5ED1A1B07EC00751C4F /* Try-ColbieCaillat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Try-ColbieCaillat.mp3"; sourceTree = "<group>"; };
+		7B1ED5ED1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Try-Colbie Caillat.mp3"; sourceTree = "<group>"; };
 		7B2F65911A073089002ED187 /* NineGridPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NineGridPasswordViewController.h; sourceTree = "<group>"; };
 		7B2F65921A073089002ED187 /* NineGridPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NineGridPasswordViewController.m; sourceTree = "<group>"; };
 		7B2F65931A073089002ED187 /* NineGridPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NineGridPasswordViewController.xib; sourceTree = "<group>"; };
@@ -121,6 +125,9 @@
 		7BC9B8F01A1B10E100356C78 /* CDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDView.h; sourceTree = "<group>"; };
 		7BC9B8F11A1B10E100356C78 /* CDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDView.m; sourceTree = "<group>"; };
 		7BC9B8F31A1B363600356C78 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7BCD021B1A1C93C9006735EA /* CDPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDPlayerViewController.xib; sourceTree = "<group>"; };
+		7BCD78AB1A1F07A30015E99D /* CDLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLayerView.h; sourceTree = "<group>"; };
+		7BCD78AC1A1F07A30015E99D /* CDLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLayerView.m; sourceTree = "<group>"; };
 		7BE9CD471A00C99D006FE8A5 /* StoryBoardTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBoardTestViewController.h; sourceTree = "<group>"; };
 		7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBoardTestViewController.m; sourceTree = "<group>"; };
 		7BFFA12A19F7A62700E0FE53 /* TableViewExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewExampleTableViewController.h; sourceTree = "<group>"; };
@@ -240,10 +247,13 @@
 			children = (
 				7B1ED5DE1A1AF35C00751C4F /* CDPlayerViewController.h */,
 				7B1ED5DF1A1AF35C00751C4F /* CDPlayerViewController.m */,
+				7BCD021B1A1C93C9006735EA /* CDPlayerViewController.xib */,
 				7B1ED5E81A1AF47300751C4F /* AlbumBackgroundView.h */,
 				7B1ED5E91A1AF47300751C4F /* AlbumBackgroundView.m */,
 				7BC9B8F01A1B10E100356C78 /* CDView.h */,
 				7BC9B8F11A1B10E100356C78 /* CDView.m */,
+				7BCD78AB1A1F07A30015E99D /* CDLayerView.h */,
+				7BCD78AC1A1F07A30015E99D /* CDLayerView.m */,
 			);
 			name = cdplayer;
 			sourceTree = "<group>";
@@ -259,8 +269,9 @@
 		7B1ED5EC1A1B07AC00751C4F /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				7B15AA7B1A1C3394009F593A /* Waltzing Leaves.mp3 */,
 				7B3B406D1A1B4E1D009C7EDF /* Deemo.mp3 */,
-				7B1ED5ED1A1B07EC00751C4F /* Try-ColbieCaillat.mp3 */,
+				7B1ED5ED1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 */,
 			);
 			name = audio;
 			sourceTree = "<group>";
@@ -498,15 +509,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */,
+				7B15AA7C1A1C3394009F593A /* Waltzing Leaves.mp3 in Resources */,
 				7BAF76321A0C6158007EB262 /* CaLayerBaseViewController.xib in Resources */,
 				7B2F65951A073089002ED187 /* NineGridPasswordViewController.xib in Resources */,
 				7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */,
 				7B6811F519ED0D550081FA88 /* ColorfulButtonCell.xib in Resources */,
 				7B64819819FF762A006A1D1F /* collectionSource.plist in Resources */,
 				7B0459901A11E87C00F232D2 /* AnimationBaseViewController.xib in Resources */,
+				7BCD021C1A1C93C9006735EA /* CDPlayerViewController.xib in Resources */,
 				7B15627F19E7ABE40019A897 /* LaunchScreen.xib in Resources */,
 				7B3B406E1A1B4E1D009C7EDF /* Deemo.mp3 in Resources */,
-				7B1ED5EE1A1B07EC00751C4F /* Try-ColbieCaillat.mp3 in Resources */,
+				7B1ED5EE1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 in Resources */,
 				7B15627C19E7ABE40019A897 /* Images.xcassets in Resources */,
 				7B64819B19FF9E22006A1D1F /* test.storyboard in Resources */,
 			);
@@ -547,6 +560,7 @@
 				7B15627119E7ABE40019A897 /* main.m in Sources */,
 				7BC9B8F21A1B10E100356C78 /* CDView.m in Sources */,
 				7BAF76311A0C6158007EB262 /* CaLayerBaseViewController.m in Sources */,
+				7BCD78AD1A1F07A30015E99D /* CDLayerView.m in Sources */,
 				7B2F659B1A074D79002ED187 /* NGGridView.m in Sources */,
 				7B56125B1A03814D0003C93E /* BaseCoreGraphicsView.m in Sources */,
 				7B04598F1A11E87C00F232D2 /* AnimationBaseViewController.m in Sources */,

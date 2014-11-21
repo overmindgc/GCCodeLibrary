@@ -12,5 +12,6 @@
 
 @property (nonatomic, copy) NSString *bgImageName;
 
+- (void)changeAlbumWithImageName:(NSString *)newImageName;
 
 @end

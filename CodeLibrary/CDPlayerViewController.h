@@ -8,7 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "CDView.h"
 
-@interface CDPlayerViewController : UIViewController <AVAudioPlayerDelegate>
+@interface CDPlayerViewController : UIViewController <AVAudioPlayerDelegate,CDViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UIButton *btnPlayPause;
+@property (weak, nonatomic) IBOutlet UIButton *btnNext;
+@property (weak, nonatomic) IBOutlet UIProgressView *progressV;//播放进度
+@property (weak, nonatomic) IBOutlet UIButton *btnLast;
+@property (weak, nonatomic) IBOutlet UILabel *labelProgressTime;
+@property (weak, nonatomic) IBOutlet UILabel *labelTotalTime;
+@property (nonatomic,strong) UILabel *labelTitle;
 
 @end

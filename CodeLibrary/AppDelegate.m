@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AVFoundation/AVFoundation.h>
 #import "MainDesktopViewController.h"
 #import "LeftNavViewController.h"
 #import "MainNavigationViewController.h"
@@ -24,6 +25,17 @@
     self.window.rootViewController = nil;
     MainNavigationViewController *mainNavController = [[MainNavigationViewController alloc] init];
     self.window.rootViewController = mainNavController;
+    
+    //设置播放会话，在后台可以继续播放（还需要设置程序允许后台运行模式）
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+    if(![[AVAudioSession sharedInstance] setActive:YES error:nil])
+    {
+        NSLog(@"Failed to set up a session.");
+    }
+    
+    
+    //启用远程控制事件接收
+    [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
     
     [self.window makeKeyAndVisible];
     return YES;

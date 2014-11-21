@@ -129,7 +129,7 @@
 				<key>className</key>
 				<string>CDPlayerViewController</string>
 				<key>loadType</key>
-				<string>code</string>
+				<string>xib</string>
 			</dict>
 		</array>
 	</dict>

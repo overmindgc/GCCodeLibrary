@@ -8,11 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol CDViewDelegate <NSObject>
+
+@optional
+//切换动画结束
+- (void)changeCDAmimationAccomplished;
+
+@end
+
 @interface CDView : UIView
+
+@property (nonatomic, weak) id<CDViewDelegate>delegate;
 
 @property (nonatomic, copy) NSString *cdImageName;
 
-/*CD视图旋转开始或结束*/
-- (void)routeStartOrStop;
+@property BOOL isRotating;
 
+- (void)changeNextWithImageName:(NSString *)newImgName;
+
+/*CD视图旋转开始或结束*/
+- (void)rotateStart;
+- (void)rotateStop;
 @end
