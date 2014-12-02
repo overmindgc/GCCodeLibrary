@@ -31,7 +31,7 @@
     CGContextScaleCTM(ctx, 1, -1);
     CGContextTranslateCTM(ctx, 0, -photo_hight);
     
-    UIImage *image=[UIImage imageNamed:cdImageName];
+    UIImage *image=[UIImage imageNamed:[NSString stringWithFormat:@"%@%@",cdImageName,@".jpg"]];
     //注意这个位置是相对于图层而言的不是屏幕
     CGContextDrawImage(ctx, CGRectMake(0, 0, photo_hight, photo_hight), image.CGImage);
     

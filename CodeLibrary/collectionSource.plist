@@ -94,11 +94,45 @@
 	</dict>
 	<dict>
 		<key>typeId</key>
+		<string>11</string>
+		<key>typeName</key>
+		<string>🌲  数据存储</string>
+		<key>child</key>
+		<array>
+			<dict>
+				<key>labelText</key>
+				<string>SqlLite测试</string>
+				<key>className</key>
+				<string>SqlLiteTestViewController</string>
+				<key>loadType</key>
+				<string>xib</string>
+			</dict>
+			<dict>
+				<key>labelText</key>
+				<string>CoreData测试</string>
+				<key>className</key>
+				<string>CoreDataTestViewController</string>
+				<key>loadType</key>
+				<string>xib</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>typeId</key>
 		<string>7</string>
 		<key>typeName</key>
-		<string>👂  自动布局</string>
+		<string>👂  多线程</string>
 		<key>child</key>
-		<array/>
+		<array>
+			<dict>
+				<key>labelText</key>
+				<string>基础多线程</string>
+				<key>className</key>
+				<string>KCMainViewController</string>
+				<key>loadType</key>
+				<string>code</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>typeId</key>

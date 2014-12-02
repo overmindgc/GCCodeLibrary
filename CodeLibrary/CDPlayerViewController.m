@@ -270,6 +270,7 @@
     }
     [cdView changeNextWithImageName:[musicArray objectAtIndex:currentMusicIndex]];
     [bgView changeAlbumWithImageName:[musicArray objectAtIndex:currentMusicIndex]];
+    
     labelTitle.text = [musicArray objectAtIndex:currentMusicIndex];
     [self resumeViewState];
     [self createAvAudioPlayerWithName:[musicArray objectAtIndex:currentMusicIndex]];

@@ -1,13 +1,13 @@
 //
-//  CDView.h
+//  KCMainViewController.h
 //  CodeLibrary
 //
-//  Created by 辰 宫 on 14/11/18.
+//  Created by 辰 宫 on 14/11/26.
 //  Copyright (c) 2014年 overmindgc. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface CDView : UIView
+@interface KCMainViewController : UIViewController
 
 @end

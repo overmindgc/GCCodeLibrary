@@ -49,7 +49,7 @@
     _gaussianBlurFilter=[CIFilter filterWithName:@"CIGaussianBlur"];
     
     //取得选择图片
-    UIImage *selectedImage = [UIImage imageNamed:bgImageName];
+    UIImage *selectedImage = [UIImage imageNamed:[NSString stringWithFormat:@"%@%@",bgImageName,@".jpg"]];
     _imageView.image = selectedImage;
     //初始化CIImage源图像
     _image = [CIImage imageWithCGImage:selectedImage.CGImage];

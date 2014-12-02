@@ -17,6 +17,12 @@
 		7B15627F19E7ABE40019A897 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B15627D19E7ABE40019A897 /* LaunchScreen.xib */; };
 		7B15628B19E7ABE40019A897 /* CodeLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */; };
 		7B15AA7C1A1C3394009F593A /* Waltzing Leaves.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B15AA7B1A1C3394009F593A /* Waltzing Leaves.mp3 */; };
+		7B182E031A2C0810006D16D8 /* CoreDataTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B182E011A2C0810006D16D8 /* CoreDataTestViewController.m */; };
+		7B182E041A2C0810006D16D8 /* CoreDataTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B182E021A2C0810006D16D8 /* CoreDataTestViewController.xib */; };
+		7B182E061A2C0844006D16D8 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B182E051A2C0844006D16D8 /* CoreData.framework */; };
+		7B182E111A2C0F9F006D16D8 /* SqlLiteTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B182E0F1A2C0F9F006D16D8 /* SqlLiteTestViewController.m */; };
+		7B182E121A2C0F9F006D16D8 /* SqlLiteTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B182E101A2C0F9F006D16D8 /* SqlLiteTestViewController.xib */; };
+		7B182E281A2C29F8006D16D8 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B182E271A2C29F8006D16D8 /* libsqlite3.0.dylib */; };
 		7B1ED5E11A1AF35C00751C4F /* CDPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1ED5DF1A1AF35C00751C4F /* CDPlayerViewController.m */; };
 		7B1ED5EA1A1AF47300751C4F /* AlbumBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B1ED5E91A1AF47300751C4F /* AlbumBackgroundView.m */; };
 		7B1ED5EE1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1ED5ED1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 */; };
@@ -25,6 +31,7 @@
 		7B2F65981A074CAB002ED187 /* NineGridPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F65971A074CAB002ED187 /* NineGridPasswordView.m */; };
 		7B2F659B1A074D79002ED187 /* NGGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F659A1A074D79002ED187 /* NGGridView.m */; };
 		7B3B406E1A1B4E1D009C7EDF /* Deemo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7B3B406D1A1B4E1D009C7EDF /* Deemo.mp3 */; };
+		7B448B771A2823BF000F45B3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B448B761A2823BF000F45B3 /* Default-568h@2x.png */; };
 		7B4FCE2B19EB806000AAE30A /* MainDesktopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B4FCE2919EB806000AAE30A /* MainDesktopViewController.m */; };
 		7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B4FCE2A19EB806000AAE30A /* MainDesktopViewController.xib */; };
 		7B5612571A037E3F0003C93E /* BaseCoreGraphicsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5612561A037E3F0003C93E /* BaseCoreGraphicsViewController.m */; };
@@ -33,18 +40,27 @@
 		7B64819B19FF9E22006A1D1F /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B64819A19FF9E22006A1D1F /* test.storyboard */; };
 		7B6811F419ED0D550081FA88 /* ColorfulButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B6811F219ED0D550081FA88 /* ColorfulButtonCell.m */; };
 		7B6811F519ED0D550081FA88 /* ColorfulButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B6811F319ED0D550081FA88 /* ColorfulButtonCell.xib */; };
+		7B68BFA41A2566FB00D7F422 /* Waltzing Leaves.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B68BFA31A2566FB00D7F422 /* Waltzing Leaves.jpg */; };
+		7B68BFA61A25670E00D7F422 /* Deemo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B68BFA51A25670E00D7F422 /* Deemo.jpg */; };
+		7B68BFA81A25671C00D7F422 /* Try-Colbie Caillat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7B68BFA71A25671C00D7F422 /* Try-Colbie Caillat.jpg */; };
+		7B68BFAD1A25ADEF00D7F422 /* KCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B68BFAC1A25ADEF00D7F422 /* KCMainViewController.m */; };
+		7B68BFB01A25B21900D7F422 /* KCImageData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B68BFAF1A25B21900D7F422 /* KCImageData.m */; };
 		7B9B03A319EE5FE20039470F /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A019EE5FE20039470F /* ICSDrawerController.m */; };
 		7B9B03A419EE5FE20039470F /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A219EE5FE20039470F /* ICSDropShadowView.m */; };
 		7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9B03A719EE61A30039470F /* LeftNavViewController.m */; };
 		7BA7A90F1A086A0800D5DE62 /* NineGridBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA7A90E1A086A0800D5DE62 /* NineGridBackgroundView.m */; };
 		7BAF76311A0C6158007EB262 /* CaLayerBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF762F1A0C6158007EB262 /* CaLayerBaseViewController.m */; };
 		7BAF76321A0C6158007EB262 /* CaLayerBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BAF76301A0C6158007EB262 /* CaLayerBaseViewController.xib */; };
+		7BC0C5141A2D63D4009F2EE4 /* NewsModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C5121A2D63D4009F2EE4 /* NewsModel.xcdatamodeld */; };
+		7BC0C5171A2D661A009F2EE4 /* CoreDateManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C5161A2D661A009F2EE4 /* CoreDateManager.m */; };
+		7BC0C51D1A2D67CF009F2EE4 /* News.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC0C51C1A2D67CF009F2EE4 /* News.m */; };
 		7BC20D9B1A01CEF200F1A86B /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC20D9A1A01CEF200F1A86B /* SwiftViewController.swift */; };
 		7BC5558619F4F56F004B0420 /* AppConsts.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5558519F4F56F004B0420 /* AppConsts.m */; };
 		7BC9B8F21A1B10E100356C78 /* CDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC9B8F11A1B10E100356C78 /* CDView.m */; };
 		7BC9B8F41A1B363600356C78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BC9B8F31A1B363600356C78 /* AVFoundation.framework */; };
 		7BCD021C1A1C93C9006735EA /* CDPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BCD021B1A1C93C9006735EA /* CDPlayerViewController.xib */; };
 		7BCD78AD1A1F07A30015E99D /* CDLayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BCD78AC1A1F07A30015E99D /* CDLayerView.m */; };
+		7BDD8F7A1A22D53400BCEA67 /* CKBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BDD8F791A22D53400BCEA67 /* CKBlurView.m */; };
 		7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */; };
 		7BFFA12D19F7A62700E0FE53 /* TableViewExampleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BFFA12B19F7A62700E0FE53 /* TableViewExampleTableViewController.m */; };
 		7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BFFA12C19F7A62700E0FE53 /* TableViewExampleTableViewController.xib */; };
@@ -80,6 +96,14 @@
 		7B15628919E7ABE40019A897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B15628A19E7ABE40019A897 /* CodeLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeLibraryTests.m; sourceTree = "<group>"; };
 		7B15AA7B1A1C3394009F593A /* Waltzing Leaves.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Waltzing Leaves.mp3"; sourceTree = "<group>"; };
+		7B182E001A2C0810006D16D8 /* CoreDataTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTestViewController.h; sourceTree = "<group>"; };
+		7B182E011A2C0810006D16D8 /* CoreDataTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTestViewController.m; sourceTree = "<group>"; };
+		7B182E021A2C0810006D16D8 /* CoreDataTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CoreDataTestViewController.xib; sourceTree = "<group>"; };
+		7B182E051A2C0844006D16D8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7B182E0E1A2C0F9F006D16D8 /* SqlLiteTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqlLiteTestViewController.h; sourceTree = "<group>"; };
+		7B182E0F1A2C0F9F006D16D8 /* SqlLiteTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqlLiteTestViewController.m; sourceTree = "<group>"; };
+		7B182E101A2C0F9F006D16D8 /* SqlLiteTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SqlLiteTestViewController.xib; sourceTree = "<group>"; };
+		7B182E271A2C29F8006D16D8 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		7B1ED5DE1A1AF35C00751C4F /* CDPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDPlayerViewController.h; sourceTree = "<group>"; };
 		7B1ED5DF1A1AF35C00751C4F /* CDPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDPlayerViewController.m; sourceTree = "<group>"; };
 		7B1ED5E81A1AF47300751C4F /* AlbumBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumBackgroundView.h; sourceTree = "<group>"; };
@@ -93,6 +117,7 @@
 		7B2F65991A074D79002ED187 /* NGGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGGridView.h; sourceTree = "<group>"; };
 		7B2F659A1A074D79002ED187 /* NGGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGGridView.m; sourceTree = "<group>"; };
 		7B3B406D1A1B4E1D009C7EDF /* Deemo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Deemo.mp3; sourceTree = "<group>"; };
+		7B448B761A2823BF000F45B3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		7B4FCE2819EB806000AAE30A /* MainDesktopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainDesktopViewController.h; sourceTree = "<group>"; };
 		7B4FCE2919EB806000AAE30A /* MainDesktopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainDesktopViewController.m; sourceTree = "<group>"; };
 		7B4FCE2A19EB806000AAE30A /* MainDesktopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainDesktopViewController.xib; sourceTree = "<group>"; };
@@ -105,6 +130,13 @@
 		7B6811F119ED0D550081FA88 /* ColorfulButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorfulButtonCell.h; sourceTree = "<group>"; };
 		7B6811F219ED0D550081FA88 /* ColorfulButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorfulButtonCell.m; sourceTree = "<group>"; };
 		7B6811F319ED0D550081FA88 /* ColorfulButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorfulButtonCell.xib; sourceTree = "<group>"; };
+		7B68BFA31A2566FB00D7F422 /* Waltzing Leaves.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Waltzing Leaves.jpg"; sourceTree = "<group>"; };
+		7B68BFA51A25670E00D7F422 /* Deemo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Deemo.jpg; sourceTree = "<group>"; };
+		7B68BFA71A25671C00D7F422 /* Try-Colbie Caillat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Try-Colbie Caillat.jpg"; sourceTree = "<group>"; };
+		7B68BFAB1A25ADEF00D7F422 /* KCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCMainViewController.h; sourceTree = "<group>"; };
+		7B68BFAC1A25ADEF00D7F422 /* KCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCMainViewController.m; sourceTree = "<group>"; };
+		7B68BFAE1A25B21900D7F422 /* KCImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCImageData.h; sourceTree = "<group>"; };
+		7B68BFAF1A25B21900D7F422 /* KCImageData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCImageData.m; sourceTree = "<group>"; };
 		7B9B039C19EE24DC0039470F /* AppMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppMacro.h; sourceTree = "<group>"; };
 		7B9B039D19EE30630039470F /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7B9B039F19EE5FE20039470F /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
@@ -118,6 +150,11 @@
 		7BAF762E1A0C6158007EB262 /* CaLayerBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaLayerBaseViewController.h; sourceTree = "<group>"; };
 		7BAF762F1A0C6158007EB262 /* CaLayerBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaLayerBaseViewController.m; sourceTree = "<group>"; };
 		7BAF76301A0C6158007EB262 /* CaLayerBaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CaLayerBaseViewController.xib; sourceTree = "<group>"; };
+		7BC0C5131A2D63D4009F2EE4 /* NewsModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsModel.xcdatamodel; sourceTree = "<group>"; };
+		7BC0C5151A2D661A009F2EE4 /* CoreDateManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDateManager.h; sourceTree = "<group>"; };
+		7BC0C5161A2D661A009F2EE4 /* CoreDateManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDateManager.m; sourceTree = "<group>"; };
+		7BC0C51B1A2D67CF009F2EE4 /* News.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = News.h; sourceTree = "<group>"; };
+		7BC0C51C1A2D67CF009F2EE4 /* News.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = News.m; sourceTree = "<group>"; };
 		7BC20D991A01CEF100F1A86B /* CodeLibrary-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeLibrary-Bridging-Header.h"; sourceTree = "<group>"; };
 		7BC20D9A1A01CEF200F1A86B /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		7BC5558419F4F56F004B0420 /* AppConsts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConsts.h; sourceTree = "<group>"; };
@@ -128,6 +165,8 @@
 		7BCD021B1A1C93C9006735EA /* CDPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CDPlayerViewController.xib; sourceTree = "<group>"; };
 		7BCD78AB1A1F07A30015E99D /* CDLayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDLayerView.h; sourceTree = "<group>"; };
 		7BCD78AC1A1F07A30015E99D /* CDLayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDLayerView.m; sourceTree = "<group>"; };
+		7BDD8F781A22D53400BCEA67 /* CKBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKBlurView.h; sourceTree = "<group>"; };
+		7BDD8F791A22D53400BCEA67 /* CKBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKBlurView.m; sourceTree = "<group>"; };
 		7BE9CD471A00C99D006FE8A5 /* StoryBoardTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryBoardTestViewController.h; sourceTree = "<group>"; };
 		7BE9CD481A00C99D006FE8A5 /* StoryBoardTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryBoardTestViewController.m; sourceTree = "<group>"; };
 		7BFFA12A19F7A62700E0FE53 /* TableViewExampleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewExampleTableViewController.h; sourceTree = "<group>"; };
@@ -142,6 +181,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B182E281A2C29F8006D16D8 /* libsqlite3.0.dylib in Frameworks */,
+				7B182E061A2C0844006D16D8 /* CoreData.framework in Frameworks */,
 				7BC9B8F41A1B363600356C78 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -169,6 +210,8 @@
 		7B15626219E7ABE40019A897 = {
 			isa = PBXGroup;
 			children = (
+				7B182E271A2C29F8006D16D8 /* libsqlite3.0.dylib */,
+				7B182E051A2C0844006D16D8 /* CoreData.framework */,
 				7BC9B8F31A1B363600356C78 /* AVFoundation.framework */,
 				7B15626D19E7ABE40019A897 /* CodeLibrary */,
 				7B15628719E7ABE40019A897 /* CodeLibraryTests */,
@@ -202,6 +245,7 @@
 				7B64819719FF762A006A1D1F /* collectionSource.plist */,
 				7B15627B19E7ABE40019A897 /* Images.xcassets */,
 				7B15627D19E7ABE40019A897 /* LaunchScreen.xib */,
+				7B448B761A2823BF000F45B3 /* Default-568h@2x.png */,
 				7B15626E19E7ABE40019A897 /* Supporting Files */,
 			);
 			path = CodeLibrary;
@@ -234,6 +278,40 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7B182DFE1A2C07D1006D16D8 /* datastorage */ = {
+			isa = PBXGroup;
+			children = (
+				7B182E0D1A2C0F76006D16D8 /* sqllitetest */,
+				7B182DFF1A2C07EC006D16D8 /* coredatatest */,
+			);
+			name = datastorage;
+			sourceTree = "<group>";
+		};
+		7B182DFF1A2C07EC006D16D8 /* coredatatest */ = {
+			isa = PBXGroup;
+			children = (
+				7B182E001A2C0810006D16D8 /* CoreDataTestViewController.h */,
+				7B182E011A2C0810006D16D8 /* CoreDataTestViewController.m */,
+				7B182E021A2C0810006D16D8 /* CoreDataTestViewController.xib */,
+				7BC0C5121A2D63D4009F2EE4 /* NewsModel.xcdatamodeld */,
+				7BC0C5151A2D661A009F2EE4 /* CoreDateManager.h */,
+				7BC0C5161A2D661A009F2EE4 /* CoreDateManager.m */,
+				7BC0C51B1A2D67CF009F2EE4 /* News.h */,
+				7BC0C51C1A2D67CF009F2EE4 /* News.m */,
+			);
+			name = coredatatest;
+			sourceTree = "<group>";
+		};
+		7B182E0D1A2C0F76006D16D8 /* sqllitetest */ = {
+			isa = PBXGroup;
+			children = (
+				7B182E0E1A2C0F9F006D16D8 /* SqlLiteTestViewController.h */,
+				7B182E0F1A2C0F9F006D16D8 /* SqlLiteTestViewController.m */,
+				7B182E101A2C0F9F006D16D8 /* SqlLiteTestViewController.xib */,
+			);
+			name = sqllitetest;
+			sourceTree = "<group>";
+		};
 		7B1ED5DC1A1AF32400751C4F /* multimedia */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +339,7 @@
 		7B1ED5EB1A1B079200751C4F /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				7B68BF9C1A25661F00D7F422 /* images */,
 				7B1ED5EC1A1B07AC00751C4F /* audio */,
 			);
 			name = resource;
@@ -323,6 +402,27 @@
 			name = storyboard;
 			sourceTree = "<group>";
 		};
+		7B68BF9C1A25661F00D7F422 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7B68BFA51A25670E00D7F422 /* Deemo.jpg */,
+				7B68BFA31A2566FB00D7F422 /* Waltzing Leaves.jpg */,
+				7B68BFA71A25671C00D7F422 /* Try-Colbie Caillat.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		7B68BFA91A25AD1300D7F422 /* multithreading */ = {
+			isa = PBXGroup;
+			children = (
+				7B68BFAB1A25ADEF00D7F422 /* KCMainViewController.h */,
+				7B68BFAC1A25ADEF00D7F422 /* KCMainViewController.m */,
+				7B68BFAE1A25B21900D7F422 /* KCImageData.h */,
+				7B68BFAF1A25B21900D7F422 /* KCImageData.m */,
+			);
+			name = multithreading;
+			sourceTree = "<group>";
+		};
 		7B9B039E19EE5FE20039470F /* ICSDrawerController */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +437,7 @@
 		7B9B03A519EE5FF40039470F /* opensourcecomps */ = {
 			isa = PBXGroup;
 			children = (
+				7BDD8F7B1A22D55F00BCEA67 /* CKBlurView */,
 				7B9B039E19EE5FE20039470F /* ICSDrawerController */,
 			);
 			name = opensourcecomps;
@@ -381,9 +482,20 @@
 			name = swifttest;
 			sourceTree = "<group>";
 		};
+		7BDD8F7B1A22D55F00BCEA67 /* CKBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				7BDD8F781A22D53400BCEA67 /* CKBlurView.h */,
+				7BDD8F791A22D53400BCEA67 /* CKBlurView.m */,
+			);
+			name = CKBlurView;
+			sourceTree = "<group>";
+		};
 		7BFFA12819F7A5A100E0FE53 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				7B182DFE1A2C07D1006D16D8 /* datastorage */,
+				7B68BFA91A25AD1300D7F422 /* multithreading */,
 				7B2F65901A072E69002ED187 /* customcomps */,
 				7B5612531A037DF70003C93E /* drawandanimation */,
 				7BFFA13319F7B03A00E0FE53 /* systemcomp */,
@@ -511,17 +623,23 @@
 				7BFFA12E19F7A62700E0FE53 /* TableViewExampleTableViewController.xib in Resources */,
 				7B15AA7C1A1C3394009F593A /* Waltzing Leaves.mp3 in Resources */,
 				7BAF76321A0C6158007EB262 /* CaLayerBaseViewController.xib in Resources */,
+				7B68BFA81A25671C00D7F422 /* Try-Colbie Caillat.jpg in Resources */,
+				7B182E041A2C0810006D16D8 /* CoreDataTestViewController.xib in Resources */,
 				7B2F65951A073089002ED187 /* NineGridPasswordViewController.xib in Resources */,
 				7B4FCE2C19EB806000AAE30A /* MainDesktopViewController.xib in Resources */,
+				7B68BFA41A2566FB00D7F422 /* Waltzing Leaves.jpg in Resources */,
 				7B6811F519ED0D550081FA88 /* ColorfulButtonCell.xib in Resources */,
 				7B64819819FF762A006A1D1F /* collectionSource.plist in Resources */,
+				7B68BFA61A25670E00D7F422 /* Deemo.jpg in Resources */,
 				7B0459901A11E87C00F232D2 /* AnimationBaseViewController.xib in Resources */,
+				7B448B771A2823BF000F45B3 /* Default-568h@2x.png in Resources */,
 				7BCD021C1A1C93C9006735EA /* CDPlayerViewController.xib in Resources */,
 				7B15627F19E7ABE40019A897 /* LaunchScreen.xib in Resources */,
 				7B3B406E1A1B4E1D009C7EDF /* Deemo.mp3 in Resources */,
 				7B1ED5EE1A1B07EC00751C4F /* Try-Colbie Caillat.mp3 in Resources */,
 				7B15627C19E7ABE40019A897 /* Images.xcassets in Resources */,
 				7B64819B19FF9E22006A1D1F /* test.storyboard in Resources */,
+				7B182E121A2C0F9F006D16D8 /* SqlLiteTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,9 +657,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B68BFB01A25B21900D7F422 /* KCImageData.m in Sources */,
+				7B182E031A2C0810006D16D8 /* CoreDataTestViewController.m in Sources */,
 				7BC20D9B1A01CEF200F1A86B /* SwiftViewController.swift in Sources */,
 				7B4FCE2B19EB806000AAE30A /* MainDesktopViewController.m in Sources */,
+				7BC0C5141A2D63D4009F2EE4 /* NewsModel.xcdatamodeld in Sources */,
 				7B1ED5E11A1AF35C00751C4F /* CDPlayerViewController.m in Sources */,
+				7B68BFAD1A25ADEF00D7F422 /* KCMainViewController.m in Sources */,
 				7BC5558619F4F56F004B0420 /* AppConsts.m in Sources */,
 				7B1ED5EA1A1AF47300751C4F /* AlbumBackgroundView.m in Sources */,
 				7BFFA12D19F7A62700E0FE53 /* TableViewExampleTableViewController.m in Sources */,
@@ -549,12 +671,16 @@
 				7BFFA13119F7A91D00E0FE53 /* MainNavigationViewController.m in Sources */,
 				7B6811F419ED0D550081FA88 /* ColorfulButtonCell.m in Sources */,
 				7B0459931A120A3E00F232D2 /* KCLayer.m in Sources */,
+				7B182E111A2C0F9F006D16D8 /* SqlLiteTestViewController.m in Sources */,
 				7B2F65941A073089002ED187 /* NineGridPasswordViewController.m in Sources */,
+				7BDD8F7A1A22D53400BCEA67 /* CKBlurView.m in Sources */,
 				7BE9CD491A00C99D006FE8A5 /* StoryBoardTestViewController.m in Sources */,
 				7B15627419E7ABE40019A897 /* AppDelegate.m in Sources */,
 				7B9B03A819EE61A30039470F /* LeftNavViewController.m in Sources */,
+				7BC0C51D1A2D67CF009F2EE4 /* News.m in Sources */,
 				7B9B03A419EE5FE20039470F /* ICSDropShadowView.m in Sources */,
 				7B9B03A319EE5FE20039470F /* ICSDrawerController.m in Sources */,
+				7BC0C5171A2D661A009F2EE4 /* CoreDateManager.m in Sources */,
 				7BA7A90F1A086A0800D5DE62 /* NineGridBackgroundView.m in Sources */,
 				7B5612571A037E3F0003C93E /* BaseCoreGraphicsViewController.m in Sources */,
 				7B15627119E7ABE40019A897 /* main.m in Sources */,
@@ -680,13 +806,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = CodeLibrary/PrefixHeader.pch;
 				INFOPLIST_FILE = CodeLibrary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CodeLibrary/CodeLibrary-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -696,12 +825,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = CodeLibrary/PrefixHeader.pch;
 				INFOPLIST_FILE = CodeLibrary/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "CodeLibrary/CodeLibrary-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -770,6 +902,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7BC0C5121A2D63D4009F2EE4 /* NewsModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7BC0C5131A2D63D4009F2EE4 /* NewsModel.xcdatamodel */,
+			);
+			currentVersion = 7BC0C5131A2D63D4009F2EE4 /* NewsModel.xcdatamodel */;
+			path = NewsModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7B15626319E7ABE40019A897 /* Project object */;
 }
