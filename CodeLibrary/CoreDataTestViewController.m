@@ -20,11 +20,18 @@
     // Do any additional setup after loading the view from its nib.
     CoreDateManager *coreManager = [[CoreDateManager alloc] init];
     
-//    NSMutableArray *newsArray = [[NSMutableArray alloc] init];
+    NSManagedObjectContext *context = [coreManager managedObjectContext];
+    NSMutableArray *newsArray = [[NSMutableArray alloc] init];
 //    NSMutableDictionary *newsDict1 = [[NSMutableDictionary alloc] init];
 //    [newsDict1 setValue:@"新闻标题1" forKey:@"title"];
-//    [newsArray addObject:newsDict1];
-//    [coreManager insertCoreData:newsArray];
+    News *newsInfo = [NSEntityDescription insertNewObjectForEntityForName:TableName inManagedObjectContext:context];
+    newsInfo.newsid = @"1";
+    newsInfo.title = @"新闻标题1";
+//    newsInfo.imgurl = info.imgurl;
+//    newsInfo.descr = info.descr;
+//    newsInfo.islook = info.islook;
+    [newsArray addObject:newsInfo];
+    [coreManager insertCoreData:newsArray];
     
     NSMutableArray *result = [coreManager selectData:10 andOffset:0];
     for (News *news in result) {

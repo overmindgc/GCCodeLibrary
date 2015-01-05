@@ -89,13 +89,13 @@
 - (void)insertCoreData:(NSMutableArray*)dataArray
 {
     NSManagedObjectContext *context = [self managedObjectContext];
-    for (NSMutableDictionary *info in dataArray) {
+    for (News *info in dataArray) {
         News *newsInfo = [NSEntityDescription insertNewObjectForEntityForName:TableName inManagedObjectContext:context];
-//        newsInfo.newsid = info.newsid;
-        newsInfo.title = [info valueForKey:@"title"];
-//        newsInfo.imgurl = info.imgurl;
-//        newsInfo.descr = info.descr;
-//        newsInfo.islook = info.islook;
+        newsInfo.newsid = info.newsid;
+        newsInfo.title = info.title;
+        newsInfo.imgurl = info.imgurl;
+        newsInfo.descr = info.descr;
+        newsInfo.islook = info.islook;
         
         NSError *error;
         if(![context save:&error])

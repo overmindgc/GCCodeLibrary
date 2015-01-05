@@ -33,6 +33,14 @@
 				<key>loadType</key>
 				<string>xib</string>
 			</dict>
+			<dict>
+				<key>labelText</key>
+				<string>PNChart示例</string>
+				<key>className</key>
+				<string>PNChartTestViewController</string>
+				<key>loadType</key>
+				<string>xib</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
